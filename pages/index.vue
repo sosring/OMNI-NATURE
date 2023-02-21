@@ -1,0 +1,4 @@
+<template>
+    
+  <LazyHomeHeroSection />
+</template>
