@@ -1,8 +1,6 @@
 <template>
     
-  <HomeHeroSection />
-
-  <HomeAboutSummary />
-
-  <HomeOurCommitment />
+    <HomeHeroSection />
+    <HomeAboutSummary />
+    <HomeOurCommitment />
 </template>

@@ -1,6 +1,5 @@
 <template>
   
-  <!-- component -->
 <footer class="bg-footer">
 
   <div class="max-w-screen-xl px-4  

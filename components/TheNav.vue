@@ -2,6 +2,7 @@
 
  <header class="fixed right-0 p-2 
   top-0 left-0 backdrop-blur z-20">
+
   <nav class="max-w-screen-xl 
    mx-auto flex justify-between">
 
@@ -9,17 +10,30 @@
      class="flex items-end">
 
       <img src="/images/Omni-logo.png" 
-       class="h-28 w-28 object-cover"
+       class="h-20 sm:h-28 object-cover"
        alt="omni care logo">
 
        <h1 class="hidden sm:block 
-        sm:py-3 text-title
-        sm:text-2xl font-oswald">
+        sm:py-3 text-title text-xl 
+        lg:text-2xl font-oswald">
         OMNI NATURE CARE <br> FOUNDATION
        </h1>
     </nuxt-link>
 
-  <span class="hidden
+  <div class="text-end space-y-2 
+   justify-end md:hidden">
+    <button class="join-btn">
+      JOIN US
+    </button> <br>
+    
+    <button 
+     @click="toggleNav"
+     class="material-symbols-outlined">
+      {{ mobileBtn }}
+    </button>
+  </div>
+
+  <div class="hidden
    md:grid text-xl p-2">
 
     <div class="flex justify-end
@@ -44,7 +58,7 @@
         </nuxt-link>
       </li>
     </ul>
-  </span>
+  </div>
   </nav>
  </header>
 
@@ -59,4 +73,18 @@
     { label: 'Gallery', path: '/gallery' },
     { label: 'Contact', path: '/contact' },
   ]
+
+  const props = defineProps({
+     showSideNav: {
+      type: Boolean
+     }
+  });
+
+  const emits = defineEmits(['update:showSideNav'])
+
+  const mobileBtn = computed(() => {
+    return props.showSideNav ? 'Close' : 'Menu'
+  })
+
+  const toggleNav = () => emits('update:showSideNav', props.showSideNav = !props.showSideNav)
 </script>

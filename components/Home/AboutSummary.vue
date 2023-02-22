@@ -1,18 +1,20 @@
 <template>
 
-  <section class="h-full relative">
+  <section class="relative
+   grid items-center">
 
     <article class="max-w-screen-xl 
      mx-auto h-full text-title
-     py-8 px-4 lg:px-16 lg:pt-12">
+     py-8 px-4 md:py-24 lg:px-16 z-10 
+     space-y-6 md:space-y-8">
 
     <h3 class="heading font-montserrat 
-     font-bold mb-2 sm:mb-8">
+     font-bold">
       OMNI NATURE <br>  CARE FOUNDATION
     </h3>
 
-    <p class="tagline mb-2 sm:mb-8
-     font-raleway w-4/5 leading-relaxed">
+    <p class="tagline font-raleway 
+      lg:w-4/5 leading-sung">
       The Omni Nature Care Foundation advocates for 
       sustainable living through the use of green energy, 
       recycling waste, and water treatment systems. 
@@ -30,8 +32,8 @@
     </button>
    </article>
 
-   <img class="absolute top-0 -right-0
-    h-250 sm:h-450"
+   <img class="z-0 absolute top-0 -right-0
+    hidden lg:block h-250 sm:h-450"
     src="/images/four-pillars.png"
     alt="four pillars of Sustainability">
 
@@ -40,10 +42,10 @@
 
 <style scoped>
   .heading {
-    font-size: clamp(1.3rem, 5vw, 4rem)
+    font-size: clamp(1.3rem, 5vw, 3.7rem)
   }
 
   .tagline {
-    font-size: clamp(1rem, 5vw, 1.3rem);
+    font-size: clamp(.9rem, 2.5vw, 1.3rem);
   }
 </style>

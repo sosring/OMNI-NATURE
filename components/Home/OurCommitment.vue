@@ -1,10 +1,10 @@
 <template>
   
-  <section class="h-full relative">
+  <section class="md:h-full relative">
 
     <article class="max-w-screen-xl 
      mx-auto h-full text-title
-     py-8 px-4 lg:px-16 lg:pt-12">
+     py-8 px-4 lg:px-16">
 
     <h3 class="heading font-montserrat 
      font-bold mb-2 sm:mb-8">
@@ -13,14 +13,15 @@
 
     </article>
 
-   <div class="polygon h-full"></div>
+   <div class="polygon 
+    h-250"></div>
 
   </section>
 </template>
 
 <style scoped>
   .heading {
-    font-size: clamp(1.3rem, 5vw, 4rem)
+    font-size: clamp(1.3rem, 5vw, 3.5rem)
   }
 
   .tagline {
