@@ -1,15 +1,14 @@
 <template>
-  <div class="h-screen w-screen">
+  <div class="h-screen w-screen
+   overflow-x-hidden">
 
-   <header class="fixed right-0 p-2 
-    top-0 left-0 backdrop-blur z-20">
     <TheNav />
-   </header>
     
-    <main class="pt-32
-     h-full w-full">
+    <main class="pt-32">
       <slot />
     </main>
+
+    <TheFooter />
   </div>
 </template>
 

@@ -27,11 +27,30 @@
   .donate-btn {
     @apply btn bg-secoundary
   }
+
+  .footer-items {
+    @apply font-montserrat font-bold 
+    text-title text-xl md:text-2xl
+    underline decoration-4 decoration-secoundary
+    underline-offset-4
+  }
+
+  .footer-links {
+    @apply font-poppins text-sm text-title
+  }
 }
 
 @layer utilities {
 
+  html {
+    height: 100%
+  }
+
   *::-webkit-scrollbar {
     display: none;
   }
+
+  *{
+    word-break: break-word; 
+   }
 }

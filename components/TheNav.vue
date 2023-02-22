@@ -1,5 +1,7 @@
 <template>
 
+ <header class="fixed right-0 p-2 
+  top-0 left-0 backdrop-blur z-20">
   <nav class="max-w-screen-xl 
    mx-auto flex justify-between">
 
@@ -18,7 +20,7 @@
     </nuxt-link>
 
   <span class="hidden
-   sm:grid text-xl p-2">
+   md:grid text-xl p-2">
 
     <div class="flex justify-end
       items-end gap-3 text-base">
@@ -44,6 +46,8 @@
     </ul>
   </span>
   </nav>
+ </header>
+
 </template>
 
 <script setup>

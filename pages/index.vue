@@ -1,4 +1,8 @@
 <template>
     
-  <LazyHomeHeroSection />
+  <HomeHeroSection />
+
+  <HomeAboutSummary />
+
+  <HomeOurCommitment />
 </template>
