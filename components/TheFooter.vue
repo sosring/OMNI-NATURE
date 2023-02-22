@@ -16,10 +16,9 @@
          class="h-28 w-28 object-cover"
          alt="omni care logo">
 
-         <h1 class="block 
-          sm:py-3 text-title
-          sm:text-2xl font-oswald">
-          OMNI NATURE CARE <br> FOUNDATION
+         <h1 class="py-3 text-title 
+          text-xl sm:text-2xl font-oswald">
+          OMNI NATURE <br> CARE FOUNDATION
          </h1>
       </nuxt-link>
 

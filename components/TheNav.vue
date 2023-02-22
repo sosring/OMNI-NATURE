@@ -1,7 +1,7 @@
 <template>
 
  <header class="fixed right-0 p-2 
-  top-0 left-0 backdrop-blur z-20">
+  top-0 left-0 backdrop-blur z-30">
 
   <nav class="max-w-screen-xl 
    mx-auto flex justify-between">
@@ -20,8 +20,8 @@
        </h1>
     </nuxt-link>
 
-  <div class="text-end space-y-2 
-   justify-end md:hidden">
+  <div class="flex flex-col items-end  
+  justify-end md:hidden">
     <button class="join-btn">
       JOIN US
     </button> <br>

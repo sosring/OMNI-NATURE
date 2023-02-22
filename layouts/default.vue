@@ -5,6 +5,9 @@
 
     <TheNav 
     v-model:showSideNav="showSideNav"/>
+
+    <TheSidebar 
+    v-model:showSideNav="showSideNav"/>
     
     <main class="pt-20 sm:pt-32">
       <slot />
