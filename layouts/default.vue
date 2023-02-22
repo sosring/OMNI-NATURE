@@ -18,6 +18,8 @@
 </template>
 
 <script setup>
+  const showSideNav = ref(false)
+
   const toggleNav = () => {
     showSidebar.value = !showSideNav.value
   }
