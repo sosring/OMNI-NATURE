@@ -3,24 +3,26 @@
   <aside v-if="showSideNav"
     class="fixed bg-primary z-40
     rounded h-screen w-screen px-2
-    py-12 "
+    py-12 block md:hidden"
     :class="animationType"
     ref="sidebarRef">
 
     <nuxt-link to="/"
-     @click="closeSidebar"
+     @click="closeSidenav"
      class="flex justify-between 
      items-end py-4 border-b-4 
      border-secoundary">
 
+     <span class="flex items-end">
       <img src="/images/Omni-logo.png" 
-       class="h-20 object-cover"
+       class="h-20 sm:h-28 object-cover"
        alt="omni care logo">
 
        <h1 class=" text-title 
-        text-xl font-oswald">
+        text-xl sm:text-2xl font-oswald">
         OMNI NATURE <br> CARE FOUNDATION
        </h1>
+     </span>
 
        <button class="material-symbols-outlined">
         close
@@ -33,8 +35,9 @@
 			<ul class="p-2 grid justify-end">
         <li v-for="route in routes">
           <nuxt-link :to="route.path"
-           @click="closeSidebar"
-           class="link flex items-end gap-4 my-2">
+           @click="closeSidenav"
+           class="link flex items-end 
+           gap-4 my-2 sm:text-xl">
             
             <i class="material-symbols-outlined">
              {{route.icon}}</i>
@@ -76,7 +79,7 @@
     return sidebarMounted.value ? 'sidebar-leave' : 'sidebar-enter' 
   })
 
-  const closeSidebar = () =>  {
+  const closeSidenav = () =>  {
    sidebarMounted.value = true
    setTimeout(() => {
      emits('update:showSideNav', false)

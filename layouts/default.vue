@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen w-screen
    overflow-x-hidden overflow-y-scroll
-   scroll-smooth">
+   scroll-smooth ">
 
     <TheNav 
     v-model:showSideNav="showSideNav"/>
@@ -18,7 +18,9 @@
 </template>
 
 <script setup>
-  const showSideNav = ref(false)
+  const toggleNav = () => {
+    showSidebar.value = !showSideNav.value
+  }
 </script>
 
 <style scoped>

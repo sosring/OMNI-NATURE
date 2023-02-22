@@ -2,5 +2,7 @@
     
     <HomeHeroSection />
     <HomeAboutSummary />
-    <HomeOurCommitment />
+<!--    <HomeOurCommitment /> -->
+
+    <HomeLastSection />
 </template>

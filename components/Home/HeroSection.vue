@@ -6,7 +6,7 @@
     <img src="/images/solar-panels.jpg" 
      alt="solar-panels"
      class="mix-blend-soft-light blur-sm 
-     opacity-30 absolute h-full w-full
+     opacity-40 absolute h-full w-full
      object-cover">
 
     <article class="max-w-screen-xl 

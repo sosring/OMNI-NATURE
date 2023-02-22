@@ -1,23 +1,28 @@
 <template>
   
-  <section class="md:h-full relative">
+  <section class="relative">
 
     <article class="max-w-screen-xl 
      mx-auto h-full text-title
-     py-8 px-4 lg:px-16">
+     py-8 px-4 lg:px-16 pt-32">
 
     <h3 class="heading font-montserrat 
      font-bold mb-2 sm:mb-8">
       Our Commitment to <br> Improving Society.
     </h3>
-
     </article>
-
-   <div class="polygon 
-    h-250"></div>
 
   </section>
 </template>
+
+<script setup>
+  const cards = [
+    { name: 'Sustainable tech promotion' },
+    { name: 'Green energy empowerment and guidance' },
+    { name: 'Educate youth on sustainability' },
+    { name: 'Environmental protection through efficiency' }
+  ] 
+</script>
 
 <style scoped>
   .heading {
@@ -32,7 +37,9 @@
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     background: linear-gradient(293.21deg, rgba( 0 0 0 / .2) 40.98%, rgba(185, 199, 210, .2) 102.93%), url('images/plant.jpg');
     background-size: cover;
+    position: absolute;
     top: 0%;
     right: 0%
   }
+
 </style>
