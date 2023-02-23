@@ -2,13 +2,13 @@
   
   <section class="relative">
 
-  <article class="article
+  <article class="diagonal
    max-w-screen-xl mx-auto 
    text-title py-8 px-4 
    lg:px-16 z-10">
 
     <h3 class="heading font-montserrat 
-     text-secoundary z-10 font-bold mb-2 sm:mb-8">
+     text-[#f4f4f8] z-10 font-bold mb-2 sm:mb-8">
       Our Commitment to <br> Improving Society.
     </h3>
 
@@ -66,7 +66,11 @@
     font-size: clamp(1rem, 5vw, 1.3rem);
   }
 
-  .article::after {
+  .diagonal  {
+    isolation: isolate;
+  }
+
+  .diagonal::after {
     content: '';
     background: linear-gradient(rgba( 0 0 0 / .4) 40.98%, rgba(185, 199, 210, .1) 102.93%), url('images/plant.jpg');
     background: cover;
@@ -76,14 +80,14 @@
     transform: skewY(-3deg)
   }
 
-  .article::before {
+  .diagonal::before {
     content: '';
     background: linear-gradient(rgba( 0 0 0 / .4) 40.98%, rgba(185, 199, 210, .1) 102.93%), url('images/plant.jpg');
     background: cover;
     position: absolute;
     inset: 0;
     z-index: -1;
-    opacity: .4;
+    opacity: .2;
     transform: skewY(3deg)
   }
 
