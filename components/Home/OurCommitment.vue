@@ -2,44 +2,44 @@
   
   <section class="relative">
 
-    <article class="max-w-screen-xl 
-     mx-auto text-title py-8 px-4 
-     lg:px-16">
+  <article class="article
+   max-w-screen-xl mx-auto 
+   text-title py-8 px-4 
+   lg:px-16 z-10">
 
-      <h3 class="heading font-montserrat 
-       font-bold mb-2 sm:mb-8">
-        Our Commitment to <br> Improving Society.
-      </h3>
+    <h3 class="heading font-montserrat 
+     text-secoundary z-10 font-bold mb-2 sm:mb-8">
+      Our Commitment to <br> Improving Society.
+    </h3>
 
-  <swiper
-    :modules="[Pagination, Autoplay,  Mousewheel]"
-    :loop="false"
-    slides-per-view="auto"
-    :space-between="30"
-    :grabCursor="true"
-    :mousewheel="true"
-    :scrollbar="{ draggable: true }"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
-    :pagination="{ 
-     clickable: true,
-     dynamicBullets: true
-    }"
-    :autoplay="{
-      delay: 2500,
-      pauseOnMouseEnter: true,
-      disableOnInteraction: false 
-    }">
+    <swiper
+      :modules="[Pagination, Autoplay,  Mousewheel]"
+      :loop="false"
+      slides-per-view="auto"
+      :space-between="30"
+      :grabCursor="true"
+      :mousewheel="true"
+      :scrollbar="{ draggable: true }"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+      :pagination="{ 
+       clickable: true,
+       dynamicBullets: true
+      }"
+      :autoplay="{
+        delay: 2500,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false 
+      }">
 
-    <swiper-slide v-for="card in cards">
-      <HomeCard 
-       :card="card"/>
-    </swiper-slide>
-  </swiper>
-
+      <swiper-slide v-for="card in cards">
+        <HomeCard 
+         :card="card"/>
+      </swiper-slide>
+    </swiper>
   </article>
+ </section>
 
-  </section>
 </template>
 
 <script setup>
@@ -66,15 +66,27 @@
     font-size: clamp(1rem, 5vw, 1.3rem);
   }
 
-  .polygon {
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    background: linear-gradient(293.21deg, rgba( 0 0 0 / .2) 40.98%, rgba(185, 199, 210, .2) 102.93%), url('images/plant.jpg');
-    background-size: cover;
+  .article::after {
+    content: '';
+    background: linear-gradient(rgba( 0 0 0 / .4) 40.98%, rgba(185, 199, 210, .1) 102.93%), url('images/plant.jpg');
+    background: cover;
     position: absolute;
-    top: 0%;
-    right: 0%
+    inset: 0;
+    z-index: -1;
+    transform: skewY(-3deg)
   }
-  
+
+  .article::before {
+    content: '';
+    background: linear-gradient(rgba( 0 0 0 / .4) 40.98%, rgba(185, 199, 210, .1) 102.93%), url('images/plant.jpg');
+    background: cover;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .4;
+    transform: skewY(3deg)
+  }
+
   .swiper {
     height: 250px;
     width: min(1140px, 100%);
@@ -90,10 +102,8 @@
 
   .sliderWrapper {
     :global(.swiper-pagination-bullet) {
-      position: absolute;
-      margin-top: 3rem
+      background: #000000;
     }
-
     :global(.swiper-pagination-bullet-active) {
       background:  #f59b48;
     }
@@ -105,7 +115,7 @@
     }
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 540px) {
     .swiper {
       height: 350px;
     }

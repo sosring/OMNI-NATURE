@@ -1,13 +1,15 @@
 <template>
-  <div class="rounded-md
-    overflow-hidden shadow-md">
-    <img class="h-[150px] sm:h-250 w-full object-cover"
+  <div class="rounded-md bg-primary
+    overflow-hidden shadow-[#a3a3a2]
+    shadow-md h-[90%]">
+    <img class="h-4/5 w-full object-cover"
      :src="`/images/${card.img}.jpg`" 
      :alt="card.img">
 
-     <p class="py-4 sm:px-1 font-montserrat
+     <p class="h-1/5 p-2 font-montserrat
       font-bold text-xs sm:text-sm
-      text-center text-title">
+      text-center text-title flex 
+      items-center justify-center">
       {{card.name}}
      </p>
   </div>

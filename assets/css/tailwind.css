@@ -6,7 +6,7 @@
 
 @layer components {
   .link {
-    @apply font-poppins
+    @apply font-poppins text-lg
   }
 
   .link.router-link-exact-active {

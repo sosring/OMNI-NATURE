@@ -1,7 +1,8 @@
 <template>
 
- <header class="fixed right-0 p-2 
-  top-0 left-0 backdrop-blur z-30">
+ <header class="fixed right-0 py-2 
+  top-0 left-0 backdrop-blur z-30
+  shadow">
 
   <nav class="max-w-screen-xl 
    mx-auto flex justify-between">
@@ -10,7 +11,7 @@
      class="flex items-end">
 
       <img src="/images/Omni-logo.png" 
-       class="h-20 sm:h-28 object-cover"
+       class="h-20 sm:h-24 object-cover"
        alt="omni care logo">
 
        <h1 class="hidden sm:block 
@@ -90,3 +91,9 @@
 
   const toggleNav = () => emits('update:showSideNav', props.showSideNav = !props.showSideNav)
 </script>
+
+<style scoped>
+  header {
+    background: rgba( 255 255 255 / .9);
+  } 
+</style>
