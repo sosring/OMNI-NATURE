@@ -14,7 +14,7 @@
 
     <swiper
       :modules="[Pagination, Autoplay,  Mousewheel]"
-      :loop="false"
+      :loop="true"
       slides-per-view="auto"
       :space-between="30"
       :grabCursor="true"

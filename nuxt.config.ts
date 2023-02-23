@@ -6,7 +6,8 @@ export default defineNuxtConfig({
        '@pinia/nuxt', 
      {autoImports: ['defineStore', 'acceptHMRUpdate']}
      ],
-     'nuxt-headlessui'
+     'nuxt-headlessui',
+     '@nuxtjs/html-validator'
   ],
   headlessui: {
     prefix: 'Headless'
@@ -24,12 +25,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   runtimeConfig: {
     DB_URI: process.env.DB_URI,
-
-    public
-    : {
-      MAP_LOCATION: process.env.MAP_LOCATION,
-      FB: process.env.FB,
-      IG: process.env.IG
+    public: {
     }
   },
   nitro: {

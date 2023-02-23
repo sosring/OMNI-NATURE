@@ -1,9 +1,13 @@
 import mongoose from 'mongoose'
 
-export default  async (_nitroApp: Nitro) => {
-  const { DB_URI } = useRuntimeConfig()
+const { DB_URI } = useRuntimeConfig()
 
-  mongoose.connect(DB_URI)
-    .then(() => console.log('DB CONNNECTED'))
-    .catch(err => console.log(err.message))
-}
+export default async () => {
+  try {
+    console.log(DB_URI)
+    await mongoose.connect(config.mongoUrl);
+    console.log("DB connection established.");
+  } catch (err) {
+    console.error.error("DB connection failed.", err);
+  }
+};

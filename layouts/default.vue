@@ -8,6 +8,14 @@
 
     <TheSidebar 
     v-model:showSideNav="showSideNav"/>
+
+    <a class="material-symbols-outlined 
+     fixed right-8 bottom-20 bg-secoundary
+     z-20 text-primary p-2 rounded-full
+     shadow-lg" 
+     href="mailto: omninaturecarefoundation@gmail.com">
+      mail
+    </a>
     
     <main class="pt-20 sm:pt-28">
       <slot />

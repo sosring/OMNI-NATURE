@@ -39,6 +39,23 @@
   .footer-links {
     @apply font-poppins text-sm text-title
   }
+
+  .form-inputs {
+    @apply block w-full p-2 border rounded
+    border-title focus:outline-none 
+    focus:ring-1 focus:ring-highlight
+    focus:border-transparent text-title
+  }
+
+  .form-textarea {
+    @apply h-250 form-inputs
+    text-title
+  }
+
+  .form-option {
+    @apply py-2 px-4 block 
+    text-title
+  }
 }
 
 @layer utilities {
@@ -64,4 +81,15 @@
    .fab {
     font-size: 2rem !important;
    }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
 }

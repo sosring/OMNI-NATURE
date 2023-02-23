@@ -10,7 +10,8 @@
      <div>
       <nuxt-link to="/"
        class="flex items-end border-b-4 
-       border-secoundary py-1">
+       border-secoundary py-1
+       space-x-4">
 
         <img src="/images/Omni-logo.png" 
          class="h-28 w-28 object-cover"
@@ -117,6 +118,10 @@
     <p class="mt-8 text-xs text-title">
       © 2022 OMNI NATURE CARE FOUNDATION 
     </p>
+    <a class="mt-8 text-xs text-title"
+     href="https://github.com/sosring" target="blank">
+      WEBSITE DEVELOPER
+    </a>
   </div>
  </footer>
 
