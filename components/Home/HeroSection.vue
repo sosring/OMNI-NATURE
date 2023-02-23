@@ -7,7 +7,7 @@
      alt="solar-panels"
      class="mix-blend-soft-light blur-sm 
      opacity-40 absolute h-full w-full
-     object-cover">
+     object-cover object-top">
 
     <article class="max-w-screen-xl 
      mx-auto relative flex py-8">
@@ -47,7 +47,7 @@
 
 <style scoped>
   .hero-section {
-    background: linear-gradient(293.21deg, rgba(183, 208, 227, 1) 40.98%, rgba(185, 199, 210, .5) 102.93%);
+    background: linear-gradient(293.21deg, rgba(183, 208, 227, .8) 40.98%, rgba(185, 199, 210, .4) 102.93%);
   }
 
   .heading {

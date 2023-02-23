@@ -10,7 +10,7 @@
       fond-montserrat py-8 px-4
       lg:p-16">
 
-      <h3 class=" heading 
+      <h3 class="heading sm:w-3/4
        font-bold mb-12 md:mb-20">
         Join us today and be a part of
         creating a sustainable world for our future.
@@ -24,10 +24,11 @@
       </button>
      </div>
 
-   <img class="absolute bottom-0
-    -right-0 h-250 sm:h-350 md:h-450"
-    src="/images/environment-goals.png"
-    alt="environment goals">
+     <img class="absolute bottom-0
+      -right-0 h-250 sm:h-350 md:h-450"
+      src="/images/environment-goals.png"
+      alt="environment goals">
+
     </article>
   </section>
 

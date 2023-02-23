@@ -21,10 +21,12 @@
     </nuxt-link>
 
   <div class="flex flex-col items-end  
-  justify-end md:hidden">
-    <button class="join-btn">
+  justify-end md:hidden gap-2">
+
+    <button class="join-btn"
+     @click="$router.push({ path: '/join' })">
       JOIN US
-    </button> <br>
+    </button>
     
     <button 
      @click="toggleNav"
