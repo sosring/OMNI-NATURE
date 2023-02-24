@@ -119,8 +119,8 @@
       © 2022 OMNI NATURE CARE FOUNDATION 
     </p>
     <a class="mt-8 text-xs text-title"
-     href="https://github.com/sosring" target="blank">
-      WEBSITE DEVELOPER
+      href="https://github.com/sosring" target="blank">
+      WEBSITE DEVELOPER | DESIGNER
     </a>
   </div>
  </footer>

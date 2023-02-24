@@ -26,7 +26,9 @@
       resources, and improved water quality.
     </p>
 
-    <button class="donate-btn py-3"
+    <button 
+     type="button"
+     class="orange-btn py-3"
      @click="$router.push({ path: '/about' })">
       KNOW MORE
     </button>

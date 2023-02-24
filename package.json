@@ -23,6 +23,7 @@
     "joi": "^17.8.3",
     "mongoose": "^6.9.2",
     "pinia": "^2.0.32",
+    "slugify": "^1.6.5",
     "swiper": "^9.0.5",
     "tailwindcss": "^3.2.7"
   }

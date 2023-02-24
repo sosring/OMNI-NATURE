@@ -10,7 +10,7 @@
      object-cover object-top">
 
     <article class="max-w-screen-xl 
-     mx-auto relative flex py-8">
+     mx-auto relative flex py-10">
 
      <div class="text-title z-10
       fond-montserrat py-8 px-4
@@ -27,7 +27,9 @@
        that works for everyone.
       </p>
 
-      <button class="donate-btn shadow-lg
+      <button 
+       type="button"
+       class="orange-btn shadow-lg
        rounded-md text-sm sm:text-lg 
        py-3 sm:px-6"
        @click="$router.push({ path: '/join' })">
@@ -36,7 +38,7 @@
      </div>
 
     <img class="absolute -right-4 
-     sm:right-12 z-0 -bottom-8 sm:bottom-0
+     sm:right-12 z-0 -bottom-4 sm:bottom-0
      h-250 sm:h-350 lg:h-[550px] object-scale-down"
      src="/images/holding-plant.png" 
      alt="holding a plant">

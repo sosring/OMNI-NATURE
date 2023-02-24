@@ -1,13 +1,15 @@
 import mongoose from 'mongoose'
+import slugify from 'slugify'
 
 const { DB_URI } = useRuntimeConfig()
 
-export default async () => {
+export default defineEventHandler(async () => {
   try {
-    console.log(DB_URI)
-    await mongoose.connect(config.mongoUrl);
+    console.log(slugify)
+    mongoose.set('strictQuery', false)
+    await mongoose.connect(DB_URI);
     console.log("DB connection established.");
   } catch (err) {
-    console.error.error("DB connection failed.", err);
+    console.log("DB connection failed.", err);
   }
-};
+})

@@ -1,7 +1,6 @@
 <template>
-  <div class="h-screen w-screen
-   overflow-x-hidden overflow-y-scroll
-   scroll-smooth ">
+  <div class="h-screen 
+   w-screen scroll-smooth">
 
     <TheNav 
     v-model:showSideNav="showSideNav"/>
@@ -9,15 +8,16 @@
     <TheSidebar 
     v-model:showSideNav="showSideNav"/>
 
-    <a class="material-symbols-outlined 
+    <nuxt-link to="/contact"
+     class="material-symbols-outlined 
      fixed right-8 bottom-20 bg-secoundary
      z-20 text-primary p-2 rounded-full
-     shadow-lg" 
-     href="mailto: omninaturecarefoundation@gmail.com">
+     shadow-lg">
       mail
-    </a>
+    </nuxt-link>
     
-    <main class="pt-20 sm:pt-28">
+    <main class="pt-20 
+     sm:pt-28">
       <slot />
     </main>
 

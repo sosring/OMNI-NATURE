@@ -1,9 +1,15 @@
 <template>
 
 <form class="w-full sm:max-w-2xl
- mx-auto py-12 px-2 md:px-6"
+ mx-auto py-12 px-2 md:px-6
+ font-montserrat text-title"
  name="registration-form" 
  @submit.prevent="submit">
+
+  <h2 class="text-secoundary heading font-bold">Register now</h2>
+  <h3 class="sub-heading font-medium mb-8">
+   Let's join our community
+  </h3>
 
   <fieldset class="grid gap-4">
 
@@ -11,6 +17,7 @@
     <input type="text" name="name" 
     class="form-inputs" 
     v-model="credentials.fullname"
+    maxlength="22"
     placeholder="First and Last" required="">
 
     <label for="email-address">Email Address</label>
@@ -19,11 +26,13 @@
     v-model="credentials.email"
     placeholder="email@domain.tld" required="">
 
-    <label for="email-address">Mobile NO.</label>
-    <input type="number" name="_replyto" 
-    class="form-inputs" 
-    v-model="credentials.number"
-    placeholder="your number" required="">
+    <label for="mobile-number">Mobile No.</label>
+    <input 
+     type="number" 
+     class="form-inputs" 
+     maxlength="10"
+     v-model="credentials.number"
+     placeholder="your number" required="">
 
     <fieldset class="grid gap-8 
      sm:grid-cols-2">
@@ -33,6 +42,7 @@
       <select name=""
        class="form-inputs bg-primary" 
        v-model="credentials.country"
+       maxlength="10"
        required="">
 
         <option value="" selected>Selected Country</option>
@@ -72,10 +82,11 @@
         </option>
       </select>
 
-      <input type="text" 
+      <input type="number" 
        name="postal-code" 
        class="form-inputs"
        v-model="credentials.pincode"
+       maxlength="6"
        placeholder="12345" required="">
 
     </fieldset>
@@ -88,7 +99,7 @@
      placeholder="Your Address">
 
 
-    <span class="relative">
+   <article class="relative">
      <label class="">Message</label>
      <textarea type="text"
       maxlength="300"
@@ -102,14 +113,15 @@
        font-mono text-base z-10">
         {{computeLetters}}/300
       </p>
-   </span>
+    </article>
 
     <span class="text-right">
-     <input type="submit" 
-     name="submit" 
-     class="join-btn py-3
-     sm:text-lg"
-     value="Register Now">
+     <button type="submit" 
+     :disabled="messageEmpty"
+     :class="messageEmpty ? 'disabled-btn' : 'blue-btn'"
+     class="btn py-3 sm:text-lg">
+      Register nnow
+     </button>
     </span>
   </fieldset>
 </form>
@@ -134,17 +146,49 @@
   message: ''
  })
 
- const submit = () => addNewVolunteer({
-  fullname: credentials.fullname,
-  email: credentials.email,
-  number: credentials.number,
-  address: credentials.address,
-  country: credentials.country,
-  state: credentials.state,
-  city: credentials.city,
-  pincode: credentials.pincode,
-  message: credentials.message
+ const handler = reactive({
+  error: null,
+  success: null,
  })
+
+ const submit = async () => {
+   try {
+     addNewVolunteer({
+      fullname: credentials.fullname,
+      email: credentials.email,
+      number: credentials.number,
+      address: credentials.address,
+      country: credentials.country,
+      state: credentials.state,
+      city: credentials.city,
+      pincode: credentials.pincode,
+      message: credentials.message
+     })
+
+     handler.success = 'Your registered has been completed.' 
+     clearCredentials()  
+   }
+   catch(err) {
+     handler.error = err.message
+     clearCredentials()  
+   }
+ }
+
+ const clearCredentials = () => {
+    credentials.fullname = '',
+    credentials.email = '',
+    credentials.number = '',
+    credentials.address = '',
+    credentials.country = '',
+    credentials.state = '',
+    credentials.city = '',
+    credentials.pincode = '',
+    credentials.message = ''
+ }
+
+ const messageEmpty = computed(() => {
+  return credentials.message >= 0 ? true : false   
+ }) 
 
   const computeLetters = computed(() => {
    return credentials.message.split('').length
@@ -160,3 +204,14 @@
     return City.getCitiesOfState(credentials.country, credentials.state)
   })
 </script>
+
+<style scoped>
+
+  .heading {
+    font-size: clamp(1.5rem, 5vw, 3rem)
+  }
+
+  .sub-heading {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+  }
+</style>

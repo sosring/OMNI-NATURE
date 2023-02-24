@@ -6,6 +6,7 @@ module.exports = {
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
+    "./app.vue"
   ],
   theme: {
     colors: {
@@ -14,7 +15,8 @@ module.exports = {
       secoundary: '#f59b48',
       title: '#444f57',
       footer: '#fffdfa',
-      highlight: '#3d9cde'
+      highlight: '#3d9cde',
+      disabled: '#00000047' 
     },
     extend: {
       fontFamily: {

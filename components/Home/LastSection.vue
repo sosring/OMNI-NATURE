@@ -16,7 +16,9 @@
         creating a sustainable world for our future.
       </h3>
 
-      <button class="donate-btn 
+      <button 
+       type="button"
+       class="orange-btn 
        rounded-md text-sm sm:text-lg 
        py-3 sm:px-6"
        @click="$router.push({ path: '/join' })">

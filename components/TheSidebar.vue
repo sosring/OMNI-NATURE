@@ -7,11 +7,13 @@
     :class="animationType"
     ref="sidebarRef">
 
+   <div class="flex justify-between
+    items-end border-b-4 border-secoundary">
+
     <nuxt-link to="/"
      @click="closeSidenav"
      class="flex justify-between 
-     items-end py-4 border-b-4 
-     border-secoundary">
+     items-end py-4">
 
      <span class="flex items-end">
       <img src="/images/Omni-logo.png" 
@@ -23,13 +25,13 @@
         OMNI NATURE <br> CARE FOUNDATION
        </h1>
      </span>
-
-       <button class="material-symbols-outlined">
-        close
-       </button>
-
     </nuxt-link>
 
+    <button class="material-symbols-outlined"
+     @click="closeSidenav">
+      close
+    </button>
+   </div>
 
 		<div class="px-3 py-4">
 			<ul class="p-2 grid justify-end">

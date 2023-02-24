@@ -2,9 +2,9 @@ import VoluteerModel from '~/server/models/volunteer.model'
 
 export default defineEventHandler ( async (event) => {
   try {
-    const getQuery = getQuery(event)
+    const query = getQuery(event)
 
-    const queryObj = {...getQuery}
+    const queryObj = {...query}
     const excludedFields = ['name', 'page', 'fields', 'limit', 'sort']
     excludedFields.forEach(el => delete queryObj[el])
 
@@ -12,28 +12,28 @@ export default defineEventHandler ( async (event) => {
     let queryStr = JSON.stringify(queryObj) 
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
 
-    let query = VoluteerModel.find(JSON.parse(queryStr))
+    let request = VoluteerModel.find(JSON.parse(queryStr))
 
     // Sorting
-    if(getQuery.sort) {
-      const sortBy = getQuery.sort.split(',').join(' ')
-      query = query.sort(sortBy)  
+    if(query.sort) {
+      const sortBy = query.sort.split(',').join(' ')
+      request = request.sort(sortBy)  
     }
 
     // Field limiting
-    if(getQuery.fields) {
-      const fields = getQuery.fields.split(',').join(' ')
-      query = query.select(fields)
+    if(query.fields) {
+      const fields = query.fields.split(',').join(' ')
+      request = request.select(fields)
     }
  
     // Pagination
-    const page = getQuery.page || 1
-    const limit = getQuery.limit || 0
+    const page = query.page || 1
+    const limit = query.limit || 0
     const skip = (page - 1) * limit
 
-    query = query.skip(skip).limit(limit)
+    request = request.skip(skip).limit(limit)
    
-    return await query 
+    return await request 
   }
   catch (err) {
     return err.message

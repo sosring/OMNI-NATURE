@@ -1,17 +1,22 @@
 import { Schema, model } from 'mongoose'  
+import slugify from 'slugify'
 
 const volunteerSchema = new Schema({
   fullname: {
     type: String,
-    required: [true, 'A volunteer must have a name']
+    required: [true, 'A volunteer must have a name'],
+    trim: true
   },
   email: {
     type: String,
-    required: [true, 'A volunteer must have a email']
+    required: [true, 'A volunteer must have a email'],
+    unique: true
   },
-  phone: {
+  number: {
     type: Number,
-    required: [true, 'A volunteer must have a phone number']
+    required: [true, 'A volunteer must have a phone number'],
+    maxlength: [10, "A number must be 10 digit."],
+    unique: true
   },
   address: {
     type: String,
@@ -29,13 +34,15 @@ const volunteerSchema = new Schema({
     type: String,
     required: [true, 'A volunteer must add their city']
   },
-  Pin: {
+  pincode: {
     type: Number,
-    required: [true, 'A volunteer must add their pin code']
+    required: [true, 'A volunteer must add their pin code'],
+    maxlength: [6, "A pin code must be 6 digits"]
   },
   message: {
     type: String,
-    required: [true, 'A volunteer must leave a message']
+    required: [true, 'A volunteer must leave a message'],
+    trim: true
   },
   donated: {
     type: Boolean,
@@ -54,8 +61,23 @@ const volunteerSchema = new Schema({
     }
   },
   donationNote: {
-    type: String
+    type: String,
+    trim: true
+  },
+  date: {
+    type: Date,
+    default: Date()
   }
 }) 
+
+volunteerSchema.pre('save', function(next) {
+  this.slug = slugify(this.fullname, { lower: true })
+  next()
+})
+
+volunteerSchema.post('save', function(doc, next) {
+  console.log(doc)
+  next()
+})
 
 export default model('Volunteer', volunteerSchema)

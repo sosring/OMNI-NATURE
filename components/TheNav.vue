@@ -25,12 +25,15 @@
   <div class="flex flex-col items-end  
   justify-end md:hidden gap-2">
 
-    <button class="join-btn"
+    <button 
+     type="button"
+     class="blue-btn"
      @click="$router.push({ path: '/join' })">
       JOIN US
     </button>
     
     <button 
+     type="button"
      @click="toggleNav"
      class="material-symbols-outlined">
       {{ mobileBtn }}
@@ -43,12 +46,16 @@
     <div class="flex justify-end
       items-end gap-3 text-base">
 
-      <button class="join-btn"
+      <button 
+       type="button"
+       class="blue-btn"
        @click="$router.push({ path: '/join' })">
         JOIN US
       </button>
 
-      <button class="donate-btn"
+      <button 
+       type="button"
+       class="orange-btn"
        @click="$router.push({ path: '/donate' })">
         DONATE
       </button>
