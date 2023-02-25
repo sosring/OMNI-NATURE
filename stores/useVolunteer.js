@@ -6,10 +6,10 @@ export const useVolunteerStore = defineStore('useVolunteer', {
     async addNewVolunteer (credentials) {
       try {
         console.log(credentials)
-        await axios.post('/api/volunteers/create', credentials) 
+        return await axios.post('/api/volunteers/create', credentials) 
       }
       catch (err) {
-        return err.message
+        return err
       }
     }
   }

@@ -8,7 +8,7 @@
    lg:px-16 z-10">
 
     <h3 class="heading font-montserrat 
-     text-[#f4f4f8] z-10 font-bold mb-2 sm:mb-8">
+     text-gray-50 z-10 font-bold mb-2 sm:mb-8">
       Our Commitment to <br> Improving Society.
     </h3>
 

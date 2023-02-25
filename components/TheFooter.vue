@@ -26,15 +26,13 @@
         <div class="flex mt-8 
          text-2xl md:text-4xl">
 
-          <a href="https://www.google.com/maps/place/NEOPHILIC+SOLUTIONS+OPC+PRIVATE+LIMITED/@26.151502,91.7803747,17z/data=!3m1!4b1!4m5!3m4!1s0x375a593d9546d6e1:0xa5180beb2533bdc8!8m2!3d26.1514972!4d91.7825634"
+          <a :href="config.public.MAP_LOCATION"
           target="_blank"
           class="address leading-snug 
           font-montserrat font-bold
           text-title duration-150
-          hover:opacity-75">
-          HOUSE NO-11.BORA BHAWAN. <br>
-          RAJBARI PATH . GANESHGURI <br>
-          GUWAHATI -781005,ASSAM
+          hover:opacity-75"
+          v-html="config.public.LOCATION">
           </a>
         </div>
       </div>
@@ -65,10 +63,10 @@
            space-y-4 text-sm ">
             <a class="footer-links 
              hover:opacity-75 flex gap-2" 
-             href="mailto:omninaturecarefoundation @gmail.com">
+             :href="`mailto:${config.public.EMAIL}`">
 
               <i class="material-symbols-outlined"> alternate_email </i>
-              <p> omninaturecarefoundation @gmail.com </p>
+              <p v-html="config.public.EMAIL"></p>
             </a>
 
            <div class="footer-links flex gap-2 hover:opacity-75 ">
@@ -76,13 +74,13 @@
             <i class="material-symbols-outlined"> phone_in_talk </i>
             <span>
               <a class="hover:opacity-75 " 
-               href="tel:9394494938">
-                <p>9394494938</p>
+               :href="`tel:${config.public.NUM1}`">
+                <p v-html="config.public.NUM1"></p>
               </a>
 
               <a class="hover:opacity-75 " 
-               href="tel:9101576002">
-                <p>9101576002</p>
+               :href="`tel:${config.public.NUM2}`">
+                <p v-html="config.public.NUM2"></p>
               </a>
             </span>
            </div>
@@ -104,12 +102,14 @@
           <p class="footer-items">
             Socials
           </p>
+
           <nav class="flex mt-4 gap-2 
            text-2xl text-title">
-            <a class="hover:opacity-75 
-             fab fa-facebook" href=""> </a>
-            <a class="hover:opacity-75 
-            fab fa-instagram" href=""> </a>
+
+            <a v-for="social in socials"
+             :class="`hover:opacity-75 
+             fab ${social.icon}`" 
+             :href="social.path"> </a>
           </nav>
         </div>
       </div>
@@ -119,7 +119,7 @@
       © 2022 OMNI NATURE CARE FOUNDATION 
     </p>
     <a class="mt-8 text-xs text-title"
-      href="https://github.com/sosring" target="blank">
+      :href="config.public.DEV" target="blank">
       WEBSITE DEVELOPER | DESIGNER
     </a>
   </div>
@@ -128,6 +128,8 @@
 </template>
 
 <script setup>
+
+  const config = useRuntimeConfig()
 
   const navs = [
     { label: 'Home', path: '/' },
@@ -144,7 +146,10 @@
     { label: 'Terms & Conditions', path: '/terms' }
   ]
 
-  const config = useRuntimeConfig()
+  const socials = [
+    { icon: 'fa-facebook', path: config.public.FB_LINK },
+    { icon: 'fa-instagram', path: config.public.IG_LINK },
+  ]
 </script>
 
 <style scoped>

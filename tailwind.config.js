@@ -5,25 +5,26 @@ module.exports = {
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-    "./app.vue"
+    "./nuxt.config.{js,ts}"
   ],
   theme: {
-    colors: {
-      transparent: 'transparent',
-      primary: '#ffffff',
-      secoundary: '#f59b48',
-      title: '#444f57',
-      footer: '#fffdfa',
-      highlight: '#3d9cde',
-      disabled: '#00000047' 
+
+    fontFamily: {
+      raleway: ['raleway'],
+      poppins: ['poppins'],
+      oswald: ['oswald'],
+      montserrat: ['montserrat']
     },
+
     extend: {
-      fontFamily: {
-        raleway: ['raleway'],
-        poppins: ['poppins'],
-        oswald: ['oswald'],
-        montserrat: ['montserrat']
+      colors: {
+        transparent: 'transparent',
+        primary: '#ffffff',
+        secoundary: '#f59b48',
+        title: '#444f57',
+        footer: '#fffdfa',
+        highlight: '#3d9cde',
+        disabled: '#00000047' 
       },
 
       height: {

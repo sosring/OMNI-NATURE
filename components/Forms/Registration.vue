@@ -4,7 +4,7 @@
  mx-auto py-12 px-2 md:px-6
  font-montserrat text-title"
  name="registration-form" 
- @submit.prevent="submit">
+ @submit.prevent="registerVolunteer">
 
   <h2 class="text-secoundary heading font-bold">Register now</h2>
   <h3 class="sub-heading font-medium mb-8">
@@ -26,9 +26,10 @@
     v-model="credentials.email"
     placeholder="email@domain.tld" required="">
 
-    <label for="mobile-number">Mobile No.</label>
+    <label for="phone">Mobile No.</label>
     <input 
-     type="number" 
+     type="tel" 
+     name="phone"
      class="form-inputs" 
      maxlength="10"
      v-model="credentials.number"
@@ -109,7 +110,7 @@
       placeholder="Write Message ..."/>
 
       <p class="absolute bottom-2
-       text-title right-4 
+       text-gray-600 right-4 
        font-mono text-base z-10">
         {{computeLetters}}/300
       </p>
@@ -120,11 +121,17 @@
      :disabled="messageEmpty"
      :class="messageEmpty ? 'disabled-btn' : 'blue-btn'"
      class="btn py-3 sm:text-lg">
-      Register nnow
+      Register now
      </button>
     </span>
   </fieldset>
 </form>
+
+  <Model 
+   v-model:show="handler.showModel"
+   :error="handler.error"
+   :title="handler.modelTitle"
+   :para="handler.modelPara"/>
 
 </template>
 
@@ -147,30 +154,34 @@
  })
 
  const handler = reactive({
-  error: null,
-  success: null,
+  showModel: false,
+  modelTitle: '',
+  modelPara: '',
+  error: null
  })
 
- const submit = async () => {
+ const registerVolunteer = async () => {
    try {
-     addNewVolunteer({
-      fullname: credentials.fullname,
-      email: credentials.email,
-      number: credentials.number,
-      address: credentials.address,
-      country: credentials.country,
-      state: credentials.state,
-      city: credentials.city,
-      pincode: credentials.pincode,
-      message: credentials.message
-     })
+     const { data } = await addNewVolunteer(credentials)
 
-     handler.success = 'Your registered has been completed.' 
-     clearCredentials()  
+     if(data.error) {
+      throw new Error(data.message)
+     } else {
+       handler.modelTitle = 'Registration successful.',
+       handler.modelPara = "Thank you for registering to volunteer with us."
+       handler.error = data.error
+       handler.showModel = true
+     }
+
+     await clearCredentials()  
    }
    catch(err) {
-     handler.error = err.message
-     clearCredentials()  
+     handler.error = true
+     handler.modelTitle = "Error" 
+     handler.modelPara = 'Error might have cause because email and number duplication' 
+     handler.showModel = true
+
+     await clearCredentials()  
    }
  }
 
@@ -186,9 +197,9 @@
     credentials.message = ''
  }
 
- const messageEmpty = computed(() => {
-  return credentials.message >= 0 ? true : false   
- }) 
+  const messageEmpty = computed(() => {
+   return credentials.message >= 0 ? true : false   
+  }) 
 
   const computeLetters = computed(() => {
    return credentials.message.split('').length

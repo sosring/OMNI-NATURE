@@ -22,8 +22,9 @@
   }
 
   .disabled-btn {
-    @apply bg-disabled 
-    text-disabled cursor-not-allowed
+    @apply bg-gray-300
+    text-gray-500 
+    cursor-not-allowed
   }
 
   .blue-btn {

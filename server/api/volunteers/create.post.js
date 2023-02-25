@@ -4,10 +4,17 @@ export default defineEventHandler ( async (event) => {
   try {
     const body = await readBody(event)
 
-    return await VoluteerModel.create(body)
+    await VoluteerModel.create(body)
+
+    return {
+      error: false
+    } 
   }
   catch (err) {
-    console.log(err.message)
-    return err.message
+    console.log(err)
+    return {
+      error: true,
+      message: err.message
+    }
   }
 })

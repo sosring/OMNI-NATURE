@@ -32,9 +32,10 @@
     v-model="credentials.email"
     placeholder="email@domain.tld" required="">
 
-    <label for="mobile-number">Mobile No.</label>
+    <label for="phone">Mobile No.</label>
     <input 
-     type="number" 
+     type="tel" 
+     name="phone"
      class="form-inputs" 
      maxlength="10"
      v-model="credentials.number"
@@ -69,19 +70,22 @@
      :disabled="messageEmpty"
      :class="messageEmpty ? 'disabled-btn' : 'orange-btn'"
      class="btn py-3 sm:text-lg">
-      Contact us
+      {{ btnState }}
      </button>
     </span>
   </fieldset>
 </form>
 
+  <Model 
+   v-model:show="handler.showModel"
+   :error="handler.error"
+   :title="handler.modelTitle"
+   :para="handler.modelPara"/>
 </template>
 
 <script setup>
- import { Country, State, City }  from 'country-state-city';
- import { useVolunteerStore } from '~/stores/useVolunteer'
-
- const { addNewVolunteer } = useVolunteerStore()
+ import emailjs from 'emailjs-com'
+ const config = useRuntimeConfig()
 
  const credentials = reactive({
   fullname: '',
@@ -92,26 +96,39 @@
  })
 
  const handler = reactive({
-  error: null,
-  success: null,
+  showModel: false,
+  modelTitle: '',
+  modelPara: '',
+  error: null
  })
+
+ const btnState = ref('Contact us') 
 
  const sendMail = async () => {
    try {
-     addNewVolunteer({
-      fullname: credentials.fullname,
-      email: credentials.email,
-      number: credentials.number,
-      address: credentials.address,
-      message: credentials.message
-     })
+     btnState.value = 'Sending...'
 
-     handler.success = 'Your Email has been send' 
-     clearCredentials()  
+     await emailjs.send(config.public.SERVICE_ID, config.public.TEMPLATE_ID, credentials, config.public.MAIL_KEY)
+      .then(() => {
+        handler.modelTitle = 'Email succesful.',
+        handler.modelPara = 'Congratulations! Your email has been sent successfully.',
+        btnState.value = 'Contact us'
+        handler.showModel = true
+      })
+      .catch(err => {
+        throw new Error(err)
+      })
+
+     await clearCredentials()  
    }
    catch(err) {
-     handler.error = err.message
-     clearCredentials()  
+     handler.error = true
+     handler.modelTitle = "Error" 
+     handler.modelPara = err.message 
+     btnState.value = 'Contact us'
+     handler.showModel = true
+
+     await clearCredentials()  
    }
  }
 
@@ -123,6 +140,10 @@
     credentials.message = ''
  }
 
+ const computeLetters = computed(() => {
+  return credentials.message.length
+ })
+
  const messageEmpty = computed(() => {
   return credentials.message >= 0 ? true : false   
  }) 
@@ -131,7 +152,7 @@
 <style scoped>
 
   .heading {
-    font-size: clamp(1.5rem, 5vw, 2rem)
+    font-size: clamp(1.5rem, 5vw, 2.3rem)
   }
 
   .sub-heading {

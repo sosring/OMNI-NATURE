@@ -15,6 +15,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'OMNI NATURE CARE FOUNDATION | NON PROFIT ORGANIZATION | GREEN INFRASTRUCTURE',
+      pageTransition: { name: 'page', mode: 'out-in' },
       htmlAttrs: {
         lang: 'en'
       },
@@ -34,14 +35,23 @@ export default defineNuxtConfig({
       ]
     }
   },
-  css: ['~/assets/css/tailwind.css'],
+  css: ['@/assets/css/tailwind.css'],
   runtimeConfig: {
     DB_URI: process.env.DB_URI,
     public: {
+     EMAIL: process.env.EMAIL,
+     NUM1: process.env.NUM1,
+     NUM2: process.env.NUM2,
+     LOCATION: process.env.LOCATION,
+     MAP_LOCATION: process.env.MAP_LOCATION,
+     FB_LINK: process.env.FB_LINK,
+     IG_LINK: process.env.IG_LINK,
+     WEB_LINK: process.env.WEB_LINK,
+     DEV: process.env.DEV,
+     TEMPLATE_ID: process.env.TEMPLATE_ID,
+     SERVICE_ID: process.env.SERVICE_ID,
+     MAIL_KEY: process.env.MAIL_KEY
     }
-  },
-  router: {
-    scrollBehavior: () => ({ x: 0, y: 0, behavior: 'smooth'  })
   },
   nitro: {
     plugins: ['~/server/db/index.js']
