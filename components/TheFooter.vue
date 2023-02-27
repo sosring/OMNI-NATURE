@@ -134,7 +134,7 @@
   const navs = [
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
-    { label: 'Campign', path: '/campign' },
+    { label: 'Campaign', path: '/campaign' },
     { label: 'Gallery', path: '/gallery' },
     { label: 'Contact', path: '/contact' },
     { label: 'Donate', path: '/donate' },

@@ -3,17 +3,10 @@
   <section class="grid 
    md:grid-cols-2">
 
-    <article class="relative">
-      <div class="absolute top-1/2 
-       left-1/2 -translate-x-1/2 
-       -translate-y-1/2 grid gap-4">
-        
-        <div>
-          <i class="material-symbols-outlined">mail</i>
-        </div>
-
-      </div>
-    </article>
+    <div class="h-full w-full 
+      bg-[url('/images/community.jpg')]
+      bg-cover bg-footer">
+    </div>
 
     <FormsContact />
   </section>

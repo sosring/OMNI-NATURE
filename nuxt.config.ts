@@ -38,6 +38,8 @@ export default defineNuxtConfig({
   css: ['@/assets/css/tailwind.css'],
   runtimeConfig: {
     DB_URI: process.env.DB_URI,
+    DB_KEY: process.env.DB_KEY,
+
     public: {
      EMAIL: process.env.EMAIL,
      NUM1: process.env.NUM1,

@@ -6,11 +6,9 @@
  name="registration-form" 
  @submit.prevent="registerVolunteer">
 
-  <h2 class="text-secoundary heading font-bold">
-   Register now
-  </h2>
+  <h2 class="text-secoundary heading font-bold">Grateful for Donation</h2>
   <h3 class="sub-heading font-medium mb-8">
-   Let's join our community
+   Creating a Sustainable Future: Joining the Fight for Positive Change
   </h3>
 
   <fieldset class="grid gap-4">
@@ -123,7 +121,7 @@
      :disabled="messageEmpty"
      :class="messageEmpty ? 'disabled-btn' : 'blue-btn'"
      class="btn py-3 sm:text-lg">
-      Register now
+      Donate now
      </button>
     </span>
   </fieldset>
@@ -225,6 +223,6 @@
   }
 
   .sub-heading {
-    font-size: clamp(1.1rem, 5vw, 1.4rem);
+    font-size: clamp(.9rem, 5vw, 1rem);
   }
 </style>

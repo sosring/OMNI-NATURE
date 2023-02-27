@@ -80,7 +80,7 @@
   const routes = [
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
-    { label: 'Campign', path: '/campaign' },
+    { label: 'Campaign', path: '/campaign' },
     { label: 'Gallery', path: '/gallery' },
     { label: 'Contact', path: '/contact' },
   ]
