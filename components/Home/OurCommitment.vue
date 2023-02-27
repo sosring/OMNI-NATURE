@@ -33,7 +33,7 @@
       }">
 
       <swiper-slide v-for="card in cards">
-        <HomeCard 
+        <Home-Card 
          :card="card"/>
       </swiper-slide>
     </swiper>

@@ -48,6 +48,6 @@
   }
 
   .tagline {
-    font-size: clamp(.9rem, 2.5vw, 1.3rem);
+    font-size: clamp(.8rem, 2.5vw, 1.3rem);
   }
 </style>

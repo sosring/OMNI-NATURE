@@ -1,6 +1,7 @@
 <template>
   <div class="h-screen 
-   w-screen scroll-smooth">
+   w-screen scroll-smooth
+   overflow-x-hidden">
 
     <TheNav 
     v-model:showSideNav="showSideNav"/>

@@ -1,7 +1,7 @@
 <template>
     
-    <HomeHeroSection />
-    <HomeAboutSummary />
-    <HomeOurCommitment /> 
-    <HomeLastSection />
+    <Home-HeroSection />
+    <Home-AboutSummary />
+    <Home-OurCommitment /> 
+    <Home-JoinSection />
 </template>

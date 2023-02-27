@@ -72,10 +72,6 @@
     -webkit-tap-hightlight-color: transparent;
   }
 
-  *::-webkit-scrollbar {
-    display: none;
-  }
-
   *{
     word-break: break-word; 
    }

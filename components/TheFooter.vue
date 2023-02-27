@@ -2,8 +2,8 @@
   
 <footer class="bg-footer">
 
-  <div class="max-w-screen-xl px-4  
-    py-8 mx-auto sm:px-6 lg:px-8">
+  <div class="max-w-screen-xl mx-auto
+    px-4 py-8 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 
      xl:gap-20 xl:grid-cols-3">
 

@@ -9,14 +9,14 @@
      opacity-40 absolute h-full w-full
      object-cover object-top">
 
-    <article class="max-w-screen-xl 
+    <article class="max-w-screen-xl
      mx-auto relative flex py-10">
 
      <div class="text-title z-10
       fond-montserrat py-8 px-4
       lg:p-16 space-y-6 md:space-y-8">
 
-      <h2 class=" heading 
+      <h2 class="heading 
        font-bold">
         Nature's harmony <br>
         for modern sustainability.

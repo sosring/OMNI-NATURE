@@ -4,9 +4,8 @@
   top-0 left-0 backdrop-blur z-30
   shadow">
 
-  <nav class="max-w-screen-xl 
-   mx-auto flex justify-between
-   px-2">
+  <nav class="max-w-screen-xl mx-auto 
+   flex justify-between px-2">
 
     <nuxt-link to="/"
      class="flex items-end">

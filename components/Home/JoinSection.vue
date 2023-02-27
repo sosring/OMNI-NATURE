@@ -3,8 +3,9 @@
   <section class="h-450 md:h-650
    relative overflow-hidden">
 
-    <article class="h-full max-w-screen-xl 
-     mx-auto relative flex py-8">
+    <article class="h-full 
+     max-w-screen-xl mx-auto 
+     relative flex py-8">
 
      <div class="text-title z-10
       fond-montserrat py-8 px-4
