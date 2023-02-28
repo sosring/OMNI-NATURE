@@ -1,21 +1,22 @@
 <template>
 
- <header class="fixed right-0 py-2 
+ <header class="fixed right-0 
   top-0 left-0 backdrop-blur z-30
   shadow">
 
   <nav class="max-w-screen-xl mx-auto 
-   flex justify-between px-2">
+   flex justify-between pr-2 sm:px-2">
 
     <nuxt-link to="/"
-     class="flex items-end">
+     class="flex items-end 
+     bg-orange-200 px-4 py-2">
 
       <img src="/images/Omni-logo.png" 
        class="h-20 sm:h-24 object-cover"
-       alt="omni care logo">
+       alt="ONC FOUNDATION LOGO">
 
        <h1 class="hidden sm:block 
-        sm:py-3 text-title text-xl 
+        sm:py-3 text-gray-600 text-xl 
         lg:text-2xl font-oswald">
         OMNI NATURE CARE <br> FOUNDATION
        </h1>
