@@ -5,8 +5,8 @@
 
      <div class="md:w-5/12 lg:w-6/12">
       <img class="rounded-md object-cover"
-       src="/images/plant-illustration.jpg" 
-       alt="green environment illustration">
+       src="/images/green-empowerment.jpg" 
+       alt="solar power industry">
       </div>
 
       <div class="md:w-7/12 lg:w-8/12">

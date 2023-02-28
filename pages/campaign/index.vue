@@ -1,15 +1,27 @@
 <template>
 
     <div class="container px-5 
-     py-24 mx-auto text-title">
+      mx-auto text-title">
+
+      <h1 class="heading font-bold 
+       py-8 text-secoundary uppercase">
+        Campaigns
+       </h1>
+
       <div class="flex flex-wrap -m-4">
 
         <Campaign-Card 
-         v-for="i in 3" />
+         v-for="campaign in campaigns"
+         :campaign="campaign" />
 
       </div>
     </div>
 </template>
+
+<script setup>
+ 
+  const { data: campaigns, error, pending } = await useFetch('/api/campaign')
+</script>
 
 <style scoped>
   .heading {

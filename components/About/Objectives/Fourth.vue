@@ -24,7 +24,7 @@
 
      <div class="md:w-5/12 lg:w-6/12">
       <img class="rounded-md object-cover"
-       src="/images/carbon-credit-illustration.png" 
+       src="/images/environment-balance-illustration.jpg" 
        alt="carbon credit illustration">
       </div>
 

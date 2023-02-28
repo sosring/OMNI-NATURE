@@ -5,8 +5,8 @@
 
      <div class="md:w-5/12 lg:w-6/12">
       <img class="rounded-md object-cover"
-       src="/images/environment-balance-illustration.jpg" 
-       alt="wate management illustration" loading="lazy">
+       src="/images/waste-management-technology.jpeg" 
+       alt="wate management technology" loading="lazy">
       </div>
 
       <div class="md:w-7/12 lg:w-8/12">
