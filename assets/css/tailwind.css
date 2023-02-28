@@ -76,6 +76,10 @@
     word-break: break-word; 
    }
 
+   *::-webkit-scrollbar {
+     display: none
+   }
+
    .material-symbols-outlined {
     font-size: 2rem !important;
    }

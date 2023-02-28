@@ -28,6 +28,10 @@
             </li>
           </ul>
         </div>
+      </div>
+    </article>
+
+    <article>
 
         <div class="mt-4">
           <p class="sub-heading font-bold">
@@ -44,7 +48,6 @@
           </ul>
         </div>
 
-      </div>
     </article>
 </template>
 
