@@ -15,8 +15,8 @@
          v-html="gallery.title">
         </h3>
 
-       <div class="grid md:grid-cols-3
-        gap-4 md:gap-8">
+       <div class="grid sm:grid-cols-2
+        lg:grid-cols-3 gap-4 md:gap-8">
 
         <img v-for="(image, index) in gallery.images"
          @click="show(index)"
