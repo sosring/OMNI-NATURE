@@ -70,7 +70,7 @@
 
   .diagonal::after {
     content: '';
-    background: linear-gradient(rgba( 0 0 0 / .4) 40.98%, rgba(185, 199, 210, .1) 102.93%), url('images/plant.jpg');
+    background: linear-gradient(rgba( 0 0 0 / .4) 40.98%, rgba(185, 199, 210, .1) 102.93%), url('/images/plant.jpg');
     background: cover;
     position: absolute;
     inset: 0;
@@ -80,7 +80,7 @@
 
   .diagonal::before {
     content: '';
-    background: linear-gradient(rgba( 0 0 0 / .4) 40.98%, rgba(185, 199, 210, .1) 102.93%), url('images/plant.jpg');
+    background: linear-gradient(rgba( 0 0 0 / .4) 40.98%, rgba(185, 199, 210, .1) 102.93%), url('/images/plant.jpg');
     background: cover;
     position: absolute;
     inset: 0;
