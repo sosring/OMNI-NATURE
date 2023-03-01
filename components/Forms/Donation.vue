@@ -13,18 +13,24 @@
 
   <fieldset class="grid gap-4">
 
+    <h3 class="form-title">
+     Doner Information
+    </h3>
+
     <label for="full-name">Full Name</label>
     <input type="text" name="name" 
     class="form-inputs" 
     v-model="credentials.fullname"
     maxlength="22"
-    placeholder="First and Last" required="">
+    placeholder="First and Last" 
+    required="">
 
     <label for="email-address">Email Address</label>
     <input type="email" name="_replyto" 
     class="form-inputs" 
     v-model="credentials.email"
-    placeholder="email@domain.tld" required="">
+    placeholder="email@domain.tld" 
+    required="">
 
     <label for="phone">Mobile No.</label>
     <input 
@@ -33,7 +39,8 @@
      class="form-inputs" 
      maxlength="10"
      v-model="credentials.number"
-     placeholder="your number" required="">
+     placeholder="your number" 
+     required="">
 
     <fieldset class="grid gap-8 
      sm:grid-cols-2">
@@ -88,7 +95,8 @@
        class="form-inputs"
        v-model="credentials.pincode"
        maxlength="6"
-       placeholder="12345" required="">
+       placeholder="12345" 
+       required="">
 
     </fieldset>
 
@@ -99,9 +107,49 @@
      v-model="credentials.address"
      placeholder="Your Address">
 
+    <h3 class="form-title">
+      Payment Information
+    </h3>
+
+  <fieldset class="flex items-center 
+   my-2 gap-2 sm:gap-4 flex-wrap">
+
+    <input type="radio" 
+     name="donation_amount" 
+     v-model="credentials.amount"
+     value="5000">
+    <label for="donation_amount">₹ 5,000</label>
+
+    <input type="radio" 
+     name="donation_amount" 
+     v-model="credentials.amount"
+     value="10000">
+    <label for="donation_amount">₹ 10,000</label>
+
+    <input type="radio" 
+     name="donation_amount" 
+     v-model="credentials.amount"
+     value="20000">
+    <label for="donation_amount">₹ 20,000</label>
+
+    <input type="radio" 
+     name="donation_amount" 
+     v-model="credentials.amount"
+     value="50000">
+    <label for="donation_amount">₹ 50,000</label>
+  </fieldset>
+
+  <!-- 
+   <label for="donation_amount">Custom Amount</label>
+   <input type="number" 
+    v-model="credentials.amount"
+    name="donation_amount" 
+    placeholder="Enter Your Amount"
+    class="form-inputs">
+  -->
 
    <article class="relative">
-     <label class="">Message</label>
+     <label class="">Donation note</label>
      <textarea type="text"
       maxlength="300"
       class="form-textarea
@@ -150,6 +198,8 @@
   state: '',
   city: '',
   pincode: '',
+  donated: '',
+  amount: '',
   message: ''
  })
 
@@ -162,6 +212,7 @@
 
  const registerVolunteer = async () => {
    try {
+     credentials.donated = true  
      const { data } = await addNewVolunteer(credentials)
 
      if(data.error) {
@@ -178,7 +229,7 @@
    catch(err) {
      handler.error = true
      handler.modelTitle = "Error" 
-     handler.modelPara = 'Error might have cause because email and number duplication' 
+     handler.modelPara = 'Theres a key duplication or an empty input field' 
      handler.showModel = true
 
      await clearCredentials()  
@@ -219,10 +270,19 @@
 <style scoped>
 
   .heading {
-    font-size: clamp(1.5rem, 5vw, 3rem)
+    font-size: clamp(1.7rem, 2.5vw, 3rem)
   }
 
   .sub-heading {
-    font-size: clamp(.9rem, 5vw, 1rem);
+    font-size: clamp(.9rem, 2.5vw, 1rem);
+  }
+
+  .title {
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  }
+
+  .form-title {
+   @apply title font-bold text-highlight 
+   border-b-2 border-highlight mt-2
   }
 </style>

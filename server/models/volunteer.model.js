@@ -51,18 +51,8 @@ const volunteerSchema = new Schema({
   amount: {
     type: Number,
     enum: {
-      values: [1500, 2500, 5000]
+      values: [5000, 10000, 20000, 50000]
     }
-  },
-  donationPlan: {
-    type: String,
-    enum: {
-      values: ['onetime', 'weekly', 'monthly', 'yearly']
-    }
-  },
-  donationNote: {
-    type: String,
-    trim: true
   },
   date: {
     type: Date,
