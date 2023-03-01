@@ -1,7 +1,7 @@
 
 <template>
 
-    <div class="container px-5 
+    <div class="max-w-screen-xl px-5 
       mx-auto text-title">
 
       <h1 class="heading font-bold 
@@ -9,19 +9,49 @@
         Gallery
        </h1>
 
-      <div class="flex flex-wrap -m-4">
+      <article>
+        <div v-show="pending">
+          <Loading />
+        </div>
+
+       <div v-show="!pending"
+        class="grid sm:grid-cols-2
+        lg:grid-cols-3 gap-6 lg:gap-8">
 
         <Gallery-Card 
-         v-for="campaign in campaigns"
-         :campaign="campaign" />
+         v-for="{_id, title, images} in gallery"
+         :images="images" 
+         :title="title"
+         :id="_id"/>
+        </div>
 
-      </div>
+      </article>
+
     </div>
 </template>
 
 <script setup>
- 
-  const { data: campaigns, error, pending } = await useFetch('/api/campaign')
+  
+  const page = ref(1)
+  const limit = ref(3)
+
+  const { data: gallery, pending, error, refesh } = await useFetch(
+   '/api/gallery',
+    { query: { page, limit }}
+  )
+
+  const skip = ref(page.value * limit.value)
+  watch(page , (newValue) => {
+    skip.value = page.value * limit.value
+  })
+
+  function next() {
+    page.value++
+  }
+
+  function previous() {
+    page.value--
+  }
 </script>
 
 <style scoped>

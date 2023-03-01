@@ -12,12 +12,6 @@ const campaignSchema = new Schema({
     required: [true, 'A campaign must have a thumbnail'],
     unique: true
   },
-  summary: {
-    type: String,
-    required: [true, 'A campaign must have a summary'],
-    maxlength: [300, 'A summary must be less or equal 300 letters'],
-    trim: true
-  },
   description: {
     type: String,
     required: [true, 'A campaign must have a description'],

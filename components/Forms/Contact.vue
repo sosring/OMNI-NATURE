@@ -26,11 +26,13 @@
     maxlength="22"
     placeholder="First and Last" required="">
 
-    <label for="email-address">Email Address</label>
-    <input type="email" name="_replyto" 
+    <label for="email">Email Address</label>
+    <input type="email" 
+    name="email" 
     class="form-inputs" 
     v-model="credentials.email"
-    placeholder="email@domain.tld" required="">
+    placeholder="email@domain.tld" 
+    required>
 
     <label for="phone">Mobile No.</label>
     <input 
@@ -39,7 +41,8 @@
      class="form-inputs" 
      maxlength="10"
      v-model="credentials.number"
-     placeholder="your number" required="">
+     placeholder="your number" 
+     required>
 
     <label for="street-address">Street Address</label>
     <input type="text"

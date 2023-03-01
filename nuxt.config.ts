@@ -6,8 +6,7 @@ export default defineNuxtConfig({
        '@pinia/nuxt', 
        {autoImports: ['defineStore', 'acceptHMRUpdate']}
      ],
-     'nuxt-headlessui',
-     '@nuxtjs/html-validator'
+     'nuxt-headlessui'
   ],
   headlessui: {
     prefix: 'Headless'
@@ -15,7 +14,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'OMNI NATURE CARE FOUNDATION | NON PROFIT ORGANIZATION | GREEN INFRASTRUCTURE',
-      pageTransition: { name: 'page', mode: 'out-in' },
       htmlAttrs: {
         lang: 'en'
       },

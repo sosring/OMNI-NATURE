@@ -1,21 +1,23 @@
 <template>
 
-  <div class="p-4 md:w-1/3">
-    <div class="h-full rounded-xl 
-     shadow-md bg-gradient-to-r 
-     from-indigo-50 to-blue-50 overflow-hidden">
-      <img class="lg:h-48 md:h-36 w-full 
-       object-cover"
-       :src="`${campaign.thumbnail}`" alt="thumbnail">
+  <article class="rounded-xl shadow-md 
+   bg-gradient-to-r from-indigo-50 
+   to-blue-50 overflow-hidden xl:h-400">
+
+      <img class="lg:h-48 md:h-36 
+       w-full object-cover"
+       :src="`${campaign.thumbnail}`" 
+       :alt="campaign.thumbnail">
 
       <div class="p-6">
-        <h1 class="text-base font-montserrat 
-         font-medium text-gray-600 mb-3"
-          v-html="campaign.title">
+        <h1 class="text-sm lg:text-base 
+         font-montserrat font-medium text-gray-600 mb-3"
+          v-html="campaign.title.slice(0,32) + '..'">
         </h1>
 
-        <p class="leading-relaxed 
-          mb-3 text-sm font-raleway"
+        <p class="leading-relaxed mb-3 
+        text-xs lg:text-sm font-raleway
+        break-all"
           v-html="summary">
         </p>
         <div class="flex items-center flex-wrap ">
@@ -29,8 +31,7 @@
          
         </div>
       </div>
-    </div>
-  </div>
+    </article>
 </template>
 
 <script setup>
@@ -39,5 +40,5 @@
       campaign: Object
     });
 
-    const summary = props.campaign.summary + '...'   
+    const summary = props.campaign.description.slice(0, 150) + '...'   
 </script>

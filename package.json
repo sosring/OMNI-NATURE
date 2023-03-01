@@ -14,7 +14,6 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@headlessui/vue": "^1.7.10",
-    "@nuxtjs/html-validator": "^1.2.3",
     "@nuxtjs/tailwindcss": "^6.4.1",
     "@pinia/nuxt": "^0.4.7",
     "@vueuse/core": "^9.13.0",

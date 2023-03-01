@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container px-5 
+    <div class="max-w-screen-xl px-5 
       mx-auto text-title">
 
       <h1 class="heading font-bold 
@@ -9,9 +9,18 @@
        </h1>
 
       <article>
+        <div v-show="error">
+          {{error}}
+        </div>
+
+        <div v-show="pending">
+          <Loading />
+        </div>
 
        <div v-show="!pending"
-        class="flex flex-wrap -m-4">
+        class="grid sm:grid-cols-2
+        lg:grid-cols-3 gap-6 lg:gap-8">
+
         <Campaign-Card 
          v-for="campaign in campaigns"
          :campaign="campaign" />
@@ -25,30 +34,22 @@
          :next="next"/>
       </article>
 
-      <div v-if="pending">
-        <Loading />
-      </div>
-
-      <div v-if="error">
-        error
-      </div>
-
     </div>
 </template>
 
 <script setup>
   
-  const page = ref(1) 
+  const page = useState('page', () => 1)
   const limit = ref(3)
 
-  const { data: campaigns, error, pending, refesh } = await useLazyFetch(
+  const { data: campaigns, pending, error, refesh } = await useFetch(
    '/api/campaign',
     { query: { page, limit }}
   )
 
-  const skip = ref((page.value - 1) * limit.value)
+  const skip = ref(page.value * limit.value)
   watch(page , (newValue) => {
-    skip.value = (page.value - 1) * limit.value
+    skip.value = page.value * limit.value
   })
 
   function next() {

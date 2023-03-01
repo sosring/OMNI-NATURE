@@ -1,5 +1,7 @@
 <template>
-<div class="inset-0 flex w-full h-full items-center justify-center duration-300 transition-opacity" style="z-index: 6000">
+<div class="inset-0 flex col-span-3 
+  items-center justify-center duration-300 
+  transition-opacity z-10 h-400">
   <div class="flex-col">
     <x-loading class="w-24 h-24">
       <svg viewBox="0 0 860.1 876.5">

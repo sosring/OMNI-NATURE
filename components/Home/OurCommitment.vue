@@ -20,8 +20,6 @@
       :grabCursor="true"
       :mousewheel="true"
       :scrollbar="{ draggable: true }"
-      @swiper="onSwiper"
-      @slideChange="onSlideChange"
       :pagination="{ 
        clickable: true,
        dynamicBullets: true

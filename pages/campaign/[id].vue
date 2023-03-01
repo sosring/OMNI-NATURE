@@ -35,7 +35,7 @@
 <script setup>
   const id = useRoute().params.id
 
-  const { data: campaign, error, pending } = await useFetch(`/api/campaign/${id}`) 
+  const { data: campaign, pending, error } = await useFetch(`/api/campaign/${id}`) 
 </script>
 
 <style scoped>

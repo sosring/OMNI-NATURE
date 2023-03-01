@@ -1,7 +1,6 @@
 <template>
   <div class="h-screen 
-   w-screen scroll-smooth
-   overflow-x-hidden">
+   w-screen scroll-smooth">
 
     <TheNav 
     v-model:showSideNav="showSideNav"/>
@@ -18,7 +17,9 @@
     </nuxt-link>
     
     <main class="pt-20 sm:pt-28">
-      <slot />
+      <transition name="fade">
+        <slot />
+      </transition>
     </main>
 
     <TheFooter />
@@ -37,10 +38,12 @@
   header {
     background: rgba( 255 255 255 / .9);
   } 
+
   .page-enter-active,
   .page-leave-active {
     transition: all 0.4s;
   }
+
   .page-enter-from,
   .page-leave-to {
     opacity: 0;

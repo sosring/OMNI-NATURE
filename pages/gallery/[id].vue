@@ -9,38 +9,53 @@
       Back
    </button>
 
-    <article class="space-y-6 md:space-y-0 
-       md:flex md:gap-6 lg:items-center lg:gap-12">
+    <article class="text-center">
 
-       <div class="md:w-5/12 lg:w-6/12">
-        <img class="rounded-md object-cover"
-         :src="campaign.thumbnail" 
-         alt="campaign.thumbnail">
-        </div>
+        <h3 class="my-4 md:my-8"
+         v-html="gallery.title">
+        </h3>
 
-        <div class="md:w-7/12 lg:w-8/12">
+       <div class="grid md:grid-cols-3
+        gap-4 md:gap-8">
 
-          <h3 class="mt-8"
-           v-html="campaign.title">
-          </h3>
+        <img v-for="(image, index) in gallery.images"
+         @click="show(index)"
+         class="rounded-md object-cover 
+         object-bottom h-250 w-full 
+         cursor-pointer"
+         :src="image" 
+         :alt="image">
+       </div>
 
-          <p class="mt-6"
-           v-html="campaign.description">
-          </p>
-        </div>
       </article>
+
+      <div v-if="showCarousel"
+       class="carousel-wrapper fixed 
+        top-0 left-0 right-0 bottom-0 
+        z-10 backdrop-blur-sm flex 
+        items-center justify-center">
+      </div>
   </section>
 </template>
 
 <script setup>
   const id = useRoute().params.id
+  const { data: gallery, error, pending } = await useFetch(`/api/gallery/${id}`) 
 
-  const { data: campaign, error, pending } = await useFetch(`/api/campaign/${id}`) 
+/*
+  const showCarousel = ref(false)
+  const carouselSlide = ref(0)
+
+  function show (index) {
+    showCarousel.value = true
+    carouselSlide.value = index
+  }
+*/
 </script>
 
 <style scoped>
   .heading {
-    font-size: clamp(1.3rem, 2.5vw, 1.7rem)
+    font-size: clamp(1.5rem, 5vw, 3.7rem)
   }
 
   .para {
@@ -49,10 +64,14 @@
 
   h3 {
     @apply heading font-montserrat 
-    text-title font-medium
+    text-secoundary font-bold uppercase
   }
 
   p {
     @apply para font-raleway text-gray-600
+  }
+
+  .carousel-wrapper {
+    background: rgba( 0 0 0 / .4)
   }
 </style>
