@@ -16,7 +16,7 @@
        alt="ONC FOUNDATION LOGO">
 
        <h1 class="hidden sm:block 
-        sm:py-3 text-gray-600 text-xl 
+        sm:py-3 text-gray-700 text-xl 
         lg:text-2xl font-oswald">
         OMNI NATURE CARE <br> FOUNDATION
        </h1>

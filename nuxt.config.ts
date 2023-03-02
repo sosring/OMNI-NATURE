@@ -17,6 +17,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en'
       },
+      pageTransition: { name: 'page', mode: 'out-in' },
       link: [
         { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css", integrity: "sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==", crossorigin: "anonymous", referrerpolicy: "no-referrer" },
         { rel: "icon", type: "image/x-icon", href: "/images/favicon.png" },
@@ -51,6 +52,11 @@ export default defineNuxtConfig({
      TEMPLATE_ID: process.env.TEMPLATE_ID,
      SERVICE_ID: process.env.SERVICE_ID,
      MAIL_KEY: process.env.MAIL_KEY
+    }
+  },
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0, behavior: 'smooth' }
     }
   },
   nitro: {

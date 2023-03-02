@@ -1,7 +1,7 @@
 <template>
 
 <form class="w-full sm:max-w-2xl
- mx-auto py-12 px-2 md:px-6
+ mx-auto py-12 px-4 md:px-6
  font-montserrat text-title"
  name="registration-form" 
  @submit.prevent="registerVolunteer">
@@ -187,7 +187,7 @@
  import { Country, State, City }  from 'country-state-city';
  import { useVolunteerStore } from '~/stores/useVolunteer'
 
- const { addNewVolunteer } = useVolunteerStore()
+ const { addNewDoner } = useVolunteerStore()
 
  const credentials = reactive({
   fullname: '',
@@ -213,7 +213,7 @@
  const registerVolunteer = async () => {
    try {
      credentials.donated = true  
-     const { data } = await addNewVolunteer(credentials)
+     const { data } = await addNewDoner(credentials)
 
      if(data.error) {
       throw new Error(data.message)
@@ -229,7 +229,7 @@
    catch(err) {
      handler.error = true
      handler.modelTitle = "Error" 
-     handler.modelPara = 'Theres a key duplication or an empty input field' 
+     handler.modelPara = err.message
      handler.showModel = true
 
      await clearCredentials()  

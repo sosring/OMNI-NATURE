@@ -48,12 +48,6 @@ const volunteerSchema = new Schema({
     type: Boolean,
     default: false
   },
-  amount: {
-    type: Number,
-    enum: {
-      values: [5000, 10000, 20000, 50000]
-    }
-  },
   date: {
     type: Date,
     default: Date()

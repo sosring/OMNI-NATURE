@@ -8,18 +8,16 @@
     <TheSidebar 
     v-model:showSideNav="showSideNav"/>
 
-    <nuxt-link to="/contact"
-     class="material-symbols-outlined 
-     fixed right-8 bottom-20 bg-secoundary
+    <button class="material-symbols-outlined 
+     fixed right-8 bottom-20 bg-highlight
      z-20 text-primary p-2 rounded-full
-     shadow-lg">
-      mail
-    </nuxt-link>
+     shadow-lg"
+     @click="scrollTop">
+      arrow_upward
+    </button>
     
     <main class="pt-20 sm:pt-28">
-      <transition name="fade">
-        <slot />
-      </transition>
+      <slot />
     </main>
 
     <TheFooter />
@@ -32,21 +30,14 @@
   const toggleNav = () => {
     showSidebar.value = !showSideNav.value
   }
+
+  function scrollTop () {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 </script>
 
 <style scoped>
   header {
     background: rgba( 255 255 255 / .9);
   } 
-
-  .page-enter-active,
-  .page-leave-active {
-    transition: all 0.4s;
-  }
-
-  .page-enter-from,
-  .page-leave-to {
-    opacity: 0;
-    filter: blur(1rem);
-  }
 </style>

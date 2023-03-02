@@ -13,8 +13,7 @@
           powered by electricity instead of fossil fuels. Use energy more efficiently.
           Remove carbon dioxide from the atmosphere. Net zero refers to a state in which the
           greenhouse gases going into the atmosphere are balanced by removal out
-          of the atmosphere.
-        </p>
+          router: {     scrollBehavior: function (to, from, savedPosition) {       return { x: 0, y: 0 }     }   },        </p>
 
         <p class="mt-4 sub-heading">
           The term net zero is important because –

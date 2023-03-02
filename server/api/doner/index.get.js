@@ -1,9 +1,9 @@
-import VolunteerModel from '~/server/models/volunteer.model'
+import DonerModel from '~/server/models/doner.model'
 import ApiFeature from '~/server/utils/ApiFeature'
 
 export default defineEventHandler ( async (event) => {
   try {
-    const features = new ApiFeature(VolunteerModel.find(), getQuery(event))
+    const features = new ApiFeature(DonerModel.find(), getQuery(event))
     features.filter().sort().limitFields().pagination()
 
     return await features.query

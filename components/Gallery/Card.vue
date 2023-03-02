@@ -16,7 +16,7 @@
         </h1>
 
         <nuxt-link :to="`/gallery/${id}`"
-         class="orange-btn">
+         class="blue-btn">
           view
          </nuxt-link>
       </div>
