@@ -8,7 +8,6 @@ export default defineEventHandler (async (event) => {
     return await GalleryModel.findById(id)
   }
   catch (err) {
-    console.log(err.reason)
-    return err.message
+    return err
   }
 })

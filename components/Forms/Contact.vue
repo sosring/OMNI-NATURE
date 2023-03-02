@@ -127,7 +127,7 @@
    catch(err) {
      handler.error = true
      handler.modelTitle = "Error" 
-     handler.modelPara = err.message 
+     handler.modelPara = err 
      btnState.value = 'Contact us'
      handler.showModel = true
 

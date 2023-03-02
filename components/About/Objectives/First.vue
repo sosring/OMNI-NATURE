@@ -32,7 +32,7 @@
     lg:grid-flow-col">
 
     <div>
-     <h3>USES IN URBAN AREA -</h3>
+     <h3>USES IN URBAN AREA </h3>
 
       <ul class="mt-4 px-6">
         <li v-for="urban in urbans"
@@ -43,7 +43,7 @@
     </div>
 
     <div>
-     <h3>USES IN RURAL AREA -</h3>
+     <h3>USES IN RURAL AREA </h3>
 
       <ul class="mt-4 px-6">
         <li v-for="rural in rurals"

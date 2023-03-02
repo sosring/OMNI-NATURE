@@ -7,6 +7,7 @@ const donerSchema = new Schema({
     required: [true, 'A doner must have a name'],
     trim: true
   },
+  slug: String,
   email: {
     type: String,
     required: [true, 'A doner must have a email']
@@ -61,11 +62,6 @@ const donerSchema = new Schema({
 
 donerSchema.pre('save', function(next) {
   this.slug = slugify(this.fullname, { lower: true })
-  next()
-})
-
-donerSchema.post('save', function(doc, next) {
-  console.log(doc)
   next()
 })
 

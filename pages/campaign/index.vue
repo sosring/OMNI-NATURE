@@ -10,11 +10,11 @@
 
       <article>
 
-        <div v-show="pending">
+        <div v-if="pending">
           <Loading />
         </div>
 
-       <div v-show="!pending"
+       <div v-else
         class="grid sm:grid-cols-2
         lg:grid-cols-3 gap-6 lg:gap-8">
 

@@ -9,6 +9,6 @@ export default defineEventHandler (async (event) => {
     return await features.query
   }
   catch (err) {
-    return err.message
+    return err
   }
 })

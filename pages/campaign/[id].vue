@@ -10,7 +10,8 @@
    </button>
 
     <article class="space-y-6 md:space-y-0 
-       md:flex md:gap-6 lg:items-center lg:gap-12">
+      md:flex md:gap-6 lg:items-center 
+      lg:gap-12">
 
        <div class="md:w-5/12 lg:w-6/12">
         <img class="rounded-md object-cover"
@@ -37,13 +38,12 @@
 
   const { data: campaign, pending, error } = await useFetch(`/api/campaign/${id}`) 
 
-  if(!campaign) {
+  if(error.value) {
     throw createError({
       statusCode: 404,
-      statusMessage: 'No such campaign is available!'
+      statusMessage: 'This Campaign does not exist!'
     })
   }
-
 </script>
 
 <style scoped>

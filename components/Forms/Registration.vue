@@ -193,7 +193,7 @@
    catch(err) {
      handler.error = true
      handler.modelTitle = "Error" 
-     handler.modelPara = err.message
+     handler.modelPara = err
      handler.showModel = true
 
      await clearCredentials()  

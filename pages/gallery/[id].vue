@@ -46,6 +46,13 @@
   const id = useRoute().params.id
   const { data: gallery, error, pending } = await useFetch(`/api/gallery/${id}`)
 
+  if(error.value) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: `A ${id} gallery does not exist!`
+    })
+  }
+
 /*
   const showCarousel = ref(false)
   const carouselSlide = ref(0)

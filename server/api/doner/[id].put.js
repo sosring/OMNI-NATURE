@@ -8,6 +8,6 @@ export default defineEventHandler ( async (event) => {
     return await VolunteerModel.findByIdAndUpdate(id, body)
   }
   catch (err) {
-    return await err.message
+    return err
   }
 })

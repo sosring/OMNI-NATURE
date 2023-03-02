@@ -48,8 +48,8 @@
      <div class="text-end">
       <a href="/OMNI.pdf" 
        download="OMNI" 
-       class="blue-btn my-2
-       uppercase">
+       class="blue-btn sm:py-3 
+       text-xs sm:text-base uppercase">
        download our pdf
       </a>
      </div>

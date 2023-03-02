@@ -12,6 +12,7 @@ const volunteerSchema = new Schema({
     required: [true, 'A volunteer must have a email'],
     unique: true
   },
+  slug: String,
   number: {
     type: Number,
     required: [true, 'A volunteer must have a phone number'],
@@ -56,11 +57,6 @@ const volunteerSchema = new Schema({
 
 volunteerSchema.pre('save', function(next) {
   this.slug = slugify(this.fullname, { lower: true })
-  next()
-})
-
-volunteerSchema.post('save', function(doc, next) {
-  console.log(doc)
   next()
 })
 

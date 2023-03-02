@@ -61,12 +61,13 @@
 
           <nav class="flex flex-col mt-4 
            space-y-4 text-sm ">
-            <a class="footer-links 
-             hover:opacity-75 flex gap-2" 
+            <a class="footer-links flex 
+             hover:opacity-75 gap-2" 
              :href="`mailto:${config.public.EMAIL}`">
 
               <i class="material-symbols-outlined"> alternate_email </i>
-              <p v-html="config.public.EMAIL"></p>
+              <p v-html="config.public.EMAIL" 
+              class="text-xs"></p>
             </a>
 
            <div class="footer-links flex gap-2 hover:opacity-75 ">

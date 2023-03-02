@@ -1,6 +1,6 @@
 <template>
   
- <div class="max-w-6xl mx-auto">
+ <div class="max-w-6xl mx-auto p-4">
 
  <h2 class="page-title">PRIVACY POLICY</h2>
  <p>1. <b>Introduction</b></p>
@@ -166,7 +166,7 @@
   }
 
   h2 {
-   @apply text-gray-700 font-oswald
+   @apply text-secoundary font-oswald
   }
 
   p {

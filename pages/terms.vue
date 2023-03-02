@@ -1,6 +1,6 @@
 <template>
 
- <div class="max-w-6xl mx-auto ">
+ <div class="max-w-6xl mx-auto p-4">
  <h2 class="page-title
   font-oswald">Terms and Conditions</h2>
 
@@ -168,7 +168,7 @@
   }
 
   h2 {
-   @apply text-gray-700 font-oswald
+   @apply text-secoundary font-oswald
   }
 
   p {

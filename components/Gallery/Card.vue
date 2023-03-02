@@ -15,7 +15,7 @@
 
       <div class="py-2 px-4 flex justify-between">
         <h1 class="text-sm lg:text-lg font-bold
-         font-montserrat text-gray-500"
+         font-montserrat text-title"
           v-html="title">
         </h1>
 

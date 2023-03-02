@@ -8,6 +8,7 @@ export default defineEventHandler (async (event) => {
     return await CampaignModel.findById(id)
   }
   catch (err) {
-    return err.message
+    console.log(err)
+    return err
   }
 })
