@@ -17,10 +17,10 @@
          class="h-28 w-28 object-cover"
          alt="omni care logo">
 
-         <h1 class="py-3 text-title 
+         <h3 class="py-3 text-title 
           text-xl sm:text-2xl font-oswald">
           OMNI NATURE <br> CARE FOUNDATION
-         </h1>
+         </h3>
       </nuxt-link>
 
         <div class="flex mt-8 

@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'OMNI NATURE CARE FOUNDATION | NON PROFIT ORGANIZATION | GREEN INFRASTRUCTURE',
+      title: 'OMNI NATURE CARE FOUNDATION | NON PROFIT | GREEN INFRASTRUCTURE',
       htmlAttrs: {
         lang: 'en'
       },
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         { hid: 'description', name: 'description', content: process.env.DESC },
         { hid: 'keywords', name: 'keywords', content: process.env.KEYWORDS },
         { hid: 'copyright', name: 'copyright', content: process.env.COPYRIGHT },
-        { hid: 'robots', name: 'robots', content: 'noindex' },
+        { hid: 'robots', name: 'robots', content: 'index' },
         { hid: 'designer', name: 'designer', content: 'sosring' }
       ]
     }
