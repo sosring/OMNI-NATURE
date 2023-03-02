@@ -45,12 +45,14 @@
         </p>
      </article>
 
+     <div class="text-end">
       <a href="/OMNI.pdf" 
        download="OMNI" 
        class="blue-btn my-2
        uppercase">
        download our pdf
       </a>
+     </div>
   </section>
 
   <section class=" my-8 sm:my-12 
