@@ -16,7 +16,7 @@
       arrow_upward
     </button>
     
-    <main class="pt-20 sm:pt-28">
+    <main class="pt-24 sm:pt-28">
       <slot />
     </main>
 
