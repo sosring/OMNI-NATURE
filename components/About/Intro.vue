@@ -44,6 +44,13 @@
         are all benefits of sustainability.
         </p>
      </article>
+
+      <a href="/OMNI.pdf" 
+       download="OMNI" 
+       class="blue-btn my-2
+       uppercase">
+       download our pdf
+      </a>
   </section>
 
   <section class=" my-8 sm:my-12 
