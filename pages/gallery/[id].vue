@@ -29,7 +29,6 @@
            :src="image"
            :alt="image">
          </div>
-
        </div>
 
       </article>
@@ -45,7 +44,7 @@
 
 <script setup>
   const id = useRoute().params.id
-  const { data: gallery, error, pending } = await useFetch(`/api/gallery/${id}`) 
+  const { data: gallery, error, pending } = await useFetch(`/api/gallery/${id}`)
 
 /*
   const showCarousel = ref(false)

@@ -99,6 +99,7 @@
   }
 
   p {
-    @apply para font-raleway text-gray-600
+    @apply para font-raleway 
+    text-gray-600
   }
 </style>

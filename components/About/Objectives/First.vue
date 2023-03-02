@@ -28,9 +28,8 @@
       </div>
     </article>
 
-   <article class="grid 
-    sm:grid-cols-2 
-    gap-4 md:gap-12">
+   <article class="grid gap-4
+    lg:grid-flow-col">
 
     <div>
      <h3>USES IN URBAN AREA -</h3>

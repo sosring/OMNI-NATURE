@@ -4,7 +4,7 @@
      px-5 mx-auto text-title">
 
       <h1 class="heading font-bold 
-       pb-8 text-secoundary uppercase">
+       py-4 text-secoundary uppercase">
         Campaigns
        </h1>
 

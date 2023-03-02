@@ -54,11 +54,6 @@ export default defineNuxtConfig({
      MAIL_KEY: process.env.MAIL_KEY
     }
   },
-  router: {
-    scrollBehavior: function (to, from, savedPosition) {
-      return { x: 0, y: 0, behavior: 'smooth' }
-    }
-  },
   nitro: {
     plugins: ['~/server/db/index.js']
   }

@@ -1,58 +1,58 @@
 <template>
 
 <form class="w-full sm:max-w-2xl
- mx-auto py-12 px-4 md:px-6
+ mx-auto py-8 px-4 md:px-6
  font-montserrat text-title"
  name="registration-form" 
  @submit.prevent="sendMail">
 
-  <div class="space-y-2 my-4">
-    <h2 class="text-secoundary heading font-bold">
-      We're delighted to receive feedback from our community!
+  <div class="mb-6 border-b-2 
+   border-highlight">
+    <h2 class="text-secoundary 
+     heading font-bold">
+      Get in Touch with Us
     </h2>
-
-    <h3 class="sub-heading 
-     font-medium text-title">
-      Connect with us
-    </h3>
   </div>
 
   <fieldset class="grid gap-4">
 
-    <label for="full-name">Full Name</label>
-    <input type="text" name="name" 
-    class="form-inputs" 
-    v-model="credentials.fullname"
-    maxlength="22"
-    placeholder="First and Last" required="">
+    <div>
+      <label for="full-name">Full Name</label>
+      <input type="text" name="name" 
+      class="form-inputs" 
+      v-model="credentials.fullname"
+      maxlength="22"
+      placeholder="First and Last" required="">
+    </div>
 
-    <label for="email">Email Address</label>
-    <input type="email" 
-    name="email" 
-    class="form-inputs" 
-    v-model="credentials.email"
-    placeholder="email@domain.tld" 
-    required>
+    <div>
+      <label for="email-address">Email Address</label>
+      <input type="email" name="_replyto" 
+      class="form-inputs" 
+      v-model="credentials.email"
+      placeholder="email@domain.tld" required="">
+    </div>
 
-    <label for="phone">Mobile No.</label>
-    <input 
-     type="tel" 
-     name="phone"
-     class="form-inputs" 
-     maxlength="10"
-     v-model="credentials.number"
-     placeholder="your number" 
-     required>
+    <div>
+      <label for="phone">Mobile No.</label>
+      <input 
+       type="number" 
+       name="phone"
+       class="form-inputs" 
+       v-model="credentials.number"
+       placeholder="your number" required="">
+    </div>
 
-    <label for="street-address">Street Address</label>
-    <input type="text"
-     name="street" 
-     class="form-inputs" 
-     v-model="credentials.address"
-     placeholder="Your Address">
+     <div>
+      <label for="street-address">Street Address</label>
+      <input type="text"
+       name="street" 
+       class="form-inputs" 
+       v-model="credentials.address"
+       placeholder="Your Address">
+     </div>
 
-
-   <article class="relative">
+   <div class="relative">
      <label class="">Message</label>
      <textarea type="text"
       maxlength="300"
@@ -66,7 +66,7 @@
        font-mono text-base z-10">
         {{computeLetters}}/300
       </p>
-    </article>
+    </div>
 
     <span class="text-right">
      <button type="submit" 
@@ -159,6 +159,6 @@
   }
 
   .sub-heading {
-    font-size: clamp(1.1rem, 5vw, 1.7rem);
+    font-size: clamp(.9rem, 5vw, 1.4rem);
   }
 </style>
