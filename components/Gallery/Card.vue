@@ -4,10 +4,14 @@
    bg-gradient-to-r from-indigo-50 
    to-blue-50 overflow-hidden">
 
-      <img class="lg:h-48 md:h-36 
-       w-full object-cover"
+     <div class="lg:h-48 md:h-36 relative 
+      bg-gradient-to-br from-slate-100 
+      to-slate-300">
+      <img class="absolute
+       h-full w-full object-cover"
        :src="`${images[0]}`" 
        :alt="images[0]">
+     </div>
 
       <div class="py-2 px-4 flex justify-between">
         <h1 class="text-sm lg:text-lg font-bold

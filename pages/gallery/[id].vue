@@ -18,13 +18,18 @@
        <div class="grid sm:grid-cols-2
         lg:grid-cols-3 gap-4 md:gap-8">
 
-        <img v-for="(image, index) in gallery.images"
-         @click="show(index)"
-         class="rounded-md object-cover 
-         object-bottom h-250 w-full 
-         cursor-pointer"
-         :src="image" 
-         :alt="image">
+
+         <div v-for="(image, index) in gallery.images"
+          class="h-250 w-full relative 
+          bg-gradient-to-br from-gray-100 
+          to-gray-200 rounded-md overflow-hidden">
+          <img class="absolute h-full 
+           w-full object-cover object-bottom 
+           cursor-pointer"
+           :src="image"
+           :alt="image">
+         </div>
+
        </div>
 
       </article>
