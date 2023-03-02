@@ -17,7 +17,7 @@
       lg:p-16 space-y-6 md:space-y-8">
 
       <h2 class="heading 
-       font-bold">
+       text-cyan-900 font-bold">
         Nature's harmony <br>
         for modern sustainability.
       </h2>
@@ -32,7 +32,7 @@
        class="orange-btn shadow-lg
        rounded-md text-sm sm:text-lg 
        py-3 sm:px-6"
-       @click="$router.push({ path: '/join' })">
+       @click="$router.push('/join')">
         Take Action Now
       </button>
      </div>

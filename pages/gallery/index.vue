@@ -5,7 +5,7 @@
       mx-auto text-title">
 
       <h1 class="heading font-bold 
-       py-8 text-secoundary uppercase">
+       pb-8 text-secoundary uppercase">
         Gallery
        </h1>
 

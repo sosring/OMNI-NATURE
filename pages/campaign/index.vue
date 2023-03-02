@@ -1,17 +1,14 @@
 <template>
 
-    <div class="max-w-screen-xl px-5 
-      mx-auto text-title">
+    <div class="max-w-screen-xl 
+     px-5 mx-auto text-title">
 
       <h1 class="heading font-bold 
-       py-8 text-secoundary uppercase">
+       pb-8 text-secoundary uppercase">
         Campaigns
        </h1>
 
       <article>
-        <div v-show="error">
-          {{error}}
-        </div>
 
         <div v-show="pending">
           <Loading />

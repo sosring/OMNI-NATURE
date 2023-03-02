@@ -1,7 +1,6 @@
 <template>
-<!-- component -->
-<!-- This is an example component -->
-<div class="my-12 text-right">
+
+<div class="my-6 text-right">
 
 	<nav aria-label="Page navigation example">
 		<ul class="inline-flex">
