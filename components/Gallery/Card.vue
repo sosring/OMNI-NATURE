@@ -4,7 +4,7 @@
    bg-gradient-to-r from-indigo-50 
    to-blue-50 overflow-hidden">
 
-     <div class="lg:h-48 md:h-36 relative 
+     <div class="h-36 lg:h-48 relative 
       bg-gradient-to-br from-slate-100 
       to-slate-300">
       <img class="absolute
