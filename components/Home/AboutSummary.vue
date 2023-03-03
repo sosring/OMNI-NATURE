@@ -5,7 +5,7 @@
 
     <article class="max-w-screen-xl 
      mx-auto h-full text-title
-     py-8 px-4 md:py-24 lg:px-16 z-10 
+     py-8 px-4 md:py-24 z-10 
      space-y-6 md:space-y-8">
 
     <h3 class="heading font-montserrat 

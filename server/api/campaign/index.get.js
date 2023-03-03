@@ -10,6 +10,7 @@ export default defineEventHandler (async (event) => {
     return await features.query
   }
   catch (err) {
+    console.log(err)
     return err
   }
 })

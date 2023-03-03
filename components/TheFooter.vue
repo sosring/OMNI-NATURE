@@ -31,7 +31,7 @@
           class="address leading-snug 
           font-montserrat font-bold
           text-title duration-150
-          hover:opacity-75"
+          md:hover:opacity-75"
           v-html="config.public.LOCATION">
           </a>
         </div>
@@ -49,7 +49,7 @@
             mt-4 space-y-2">
 
             <nuxt-link v-for="nav in navs"
-             class="footer-links hover:opacity-75"
+             class="footer-links md:hover:opacity-75"
              :to="nav.path"> {{ nav.label }} </nuxt-link>
           </nav>
         </div>
@@ -62,7 +62,7 @@
           <nav class="flex flex-col mt-4 
            space-y-4 text-sm ">
             <a class="footer-links flex 
-             hover:opacity-75 gap-2" 
+             md:hover:opacity-75 gap-2" 
              :href="`mailto:${config.public.EMAIL}`">
 
               <i class="material-symbols-outlined"> alternate_email </i>
@@ -70,16 +70,16 @@
               class="text-xs"></p>
             </a>
 
-           <div class="footer-links flex gap-2 hover:opacity-75 ">
+           <div class="footer-links flex gap-2 md:hover:opacity-75 ">
 
             <i class="material-symbols-outlined"> phone_in_talk </i>
             <span>
-              <a class="hover:opacity-75 " 
+              <a class="md:hover:opacity-75 " 
                :href="`tel:${config.public.NUM1}`">
                 <p v-html="config.public.NUM1"></p>
               </a>
 
-              <a class="hover:opacity-75 " 
+              <a class="md:hover:opacity-75 " 
                :href="`tel:${config.public.NUM2}`">
                 <p v-html="config.public.NUM2"></p>
               </a>
@@ -108,7 +108,7 @@
            text-2xl text-title">
 
             <a v-for="social in socials"
-             :class="`hover:opacity-75 
+             :class="`md:hover:opacity-75 
              fab ${social.icon}`" 
              :href="social.path"> </a>
           </nav>

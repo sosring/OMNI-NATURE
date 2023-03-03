@@ -10,11 +10,11 @@
      object-cover object-top">
 
     <article class="max-w-screen-xl
-     mx-auto relative flex py-10">
+     mx-auto relative flex py-10 px-4">
 
      <div class="text-title z-10
       fond-montserrat py-8 px-4
-      lg:p-16 space-y-6 md:space-y-8">
+      lg:py-16 space-y-6 md:space-y-8">
 
       <h2 class="heading 
        text-cyan-900 font-bold">
@@ -38,7 +38,7 @@
      </div>
 
     <img class="absolute -right-4 
-     sm:right-12 z-0 -bottom-4 sm:bottom-0
+     sm:right-0 z-0 -bottom-4 sm:bottom-0
      h-250 sm:h-350 lg:h-[550px] object-scale-down"
      src="/images/holding-plant.png" 
      alt="holding a plant">

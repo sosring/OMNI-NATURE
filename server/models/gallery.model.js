@@ -15,7 +15,7 @@ const gallerySchema = new Schema({
 })
 
 gallerySchema.pre('save', function(next) {
-  this.slug = slugify(this.fullname, { lower: true })
+  this.slug = slugify(this.title, { lower: true })
   next()
 })
 
