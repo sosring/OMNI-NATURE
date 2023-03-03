@@ -6,8 +6,7 @@ export default defineNuxtConfig({
        '@pinia/nuxt', 
        {autoImports: ['defineStore', 'acceptHMRUpdate']}
      ],
-     'nuxt-headlessui',
-     '@nuxtjs/google-analytics'
+     'nuxt-headlessui'
   ],
   googleAnalytics: {
     id: process.env.GA_MEASUREMENT_ID
