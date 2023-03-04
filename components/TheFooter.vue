@@ -26,13 +26,14 @@
         <div class="flex mt-8 
          text-2xl md:text-4xl">
 
-          <a :href="config.public.MAP_LOCATION"
+          <a :href="useDetails.map"
           target="_blank"
           class="address leading-snug 
           font-montserrat font-bold
           text-title duration-150
-          md:hover:opacity-75"
-          v-html="config.public.LOCATION">
+          md:hover:opacity-75 
+          cursor-pointer"
+          v-html="useDetails.location">
           </a>
         </div>
       </div>
@@ -63,10 +64,10 @@
            space-y-4 text-sm ">
             <a class="footer-links flex 
              md:hover:opacity-75 gap-2" 
-             :href="`mailto:${config.public.EMAIL}`">
+             :href="`mailto:${useDetails.email}`">
 
               <i class="material-symbols-outlined"> alternate_email </i>
-              <p v-html="config.public.EMAIL" 
+              <p v-html="useDetails.email" 
               class="text-xs"></p>
             </a>
 
@@ -75,13 +76,13 @@
             <i class="material-symbols-outlined"> phone_in_talk </i>
             <span>
               <a class="md:hover:opacity-75 " 
-               :href="`tel:${config.public.NUM1}`">
-                <p v-html="config.public.NUM1"></p>
+               :href="`tel:${useDetails.num1}`">
+                <p v-html="useDetails.num1"></p>
               </a>
 
               <a class="md:hover:opacity-75 " 
-               :href="`tel:${config.public.NUM2}`">
-                <p v-html="config.public.NUM2"></p>
+               :href="`tel:${useDetails.num2}`">
+                <p v-html="useDetails.num2"></p>
               </a>
             </span>
            </div>
@@ -109,8 +110,10 @@
 
             <a v-for="social in socials"
              :class="`md:hover:opacity-75 
-             fab ${social.icon}`" 
-             :href="social.path"> </a>
+             fab ${social.icon} 
+             cursor-pointer`" 
+             :href="social.path"
+             target="blank"> </a>
           </nav>
         </div>
       </div>
@@ -129,7 +132,9 @@
 </template>
 
 <script setup>
+  import { useDetailStore } from '~/stores/useDetails'
 
+  const useDetails = useDetailStore()
   const config = useRuntimeConfig()
 
   const navs = [
@@ -148,8 +153,8 @@
   ]
 
   const socials = [
-    { icon: 'fa-facebook', path: config.public.FB_LINK },
-    { icon: 'fa-instagram', path: config.public.IG_LINK },
+    { icon: 'fa-facebook', path: useDetails.facebook },
+    { icon: 'fa-instagram', path: useDetails.instagram },
   ]
 </script>
 
