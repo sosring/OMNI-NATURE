@@ -61,9 +61,10 @@
           </p>
 
           <nav class="flex flex-col mt-4 
-           space-y-4 text-sm ">
-            <a class="footer-links flex 
-             md:hover:opacity-75 gap-2" 
+           space-y-4 text-sm">
+
+            <a class="footer-links flex gap-2
+             item-center md:hover:opacity-75" 
              :href="`mailto:${useDetails.email}`">
 
               <i class="material-symbols-outlined"> alternate_email </i>
@@ -71,10 +72,11 @@
               class="text-xs"></p>
             </a>
 
-           <div class="footer-links flex gap-2 md:hover:opacity-75 ">
+           <div class="footer-links flex 
+            gap-2 md:hover:opacity-75 ">
 
             <i class="material-symbols-outlined"> phone_in_talk </i>
-            <span>
+            <div>
               <a class="md:hover:opacity-75 " 
                :href="`tel:${useDetails.num1}`">
                 <p v-html="useDetails.num1"></p>
@@ -84,7 +86,7 @@
                :href="`tel:${useDetails.num2}`">
                 <p v-html="useDetails.num2"></p>
               </a>
-            </span>
+            </div>
            </div>
           </nav>
         </div>

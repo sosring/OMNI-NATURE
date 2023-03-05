@@ -14,7 +14,6 @@
 
 <script setup>
   const config = useRuntimeConfig()
-  console.log(config.public)
 
   const contacts = [ 
     { label: 'Contact no.', detail: '9394494938/ <br> 9101576002', icon: 'call' },
