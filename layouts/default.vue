@@ -15,6 +15,9 @@
      @click="scrollTop">
       arrow_upward
     </button>
+
+    <PopupModel
+     v-model:show="popup"/>
     
     <main class="pt-24 sm:pt-28">
       <slot />
@@ -34,6 +37,15 @@
   function scrollTop () {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+  // Popup Logic
+
+  const popup = ref(false)
+
+  setTimeout(() => {
+    popup.value = true
+  }, 10000);
+
 </script>
 
 <style scoped>
