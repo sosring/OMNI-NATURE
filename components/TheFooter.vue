@@ -125,8 +125,8 @@
       © 2022 OMNI NATURE CARE FOUNDATION 
     </p>
     <a class="mt-8 text-xs text-title"
-      :href="config.public.DEV" target="blank">
-      WEBSITE DEVELOPER | DESIGNER
+      :href="useDetails.dev" target="blank">
+        WEBSITE DEVELOPER | DESIGNER
     </a>
   </div>
  </footer>
@@ -137,7 +137,6 @@
   import { useDetailStore } from '~/stores/useDetails'
 
   const useDetails = useDetailStore()
-  const config = useRuntimeConfig()
 
   const navs = [
     { label: 'Home', path: '/' },

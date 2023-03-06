@@ -88,7 +88,7 @@
 
 <script setup>
  import emailjs from 'emailjs-com'
- const config = useRuntimeConfig()
+ const config = useRuntimeConfig().public
 
  import { useAnimate } from '~/composables/useAnimate'
  const { slide } = useAnimate()
@@ -118,7 +118,7 @@
    try {
      btnState.value = 'Sending...'
 
-     await emailjs.send(config.public.SERVICE_ID, config.public.TEMPLATE_ID, credentials, config.public.MAIL_KEY)
+     await emailjs.send(config.SERVICE_ID, config.TEMPLATE_ID, credentials, config.MAIL_KEY)
       .then(() => {
         handler.modelTitle = 'Email succesful.',
         handler.modelPara = 'Congratulations! Your email has been sent successfully.',
