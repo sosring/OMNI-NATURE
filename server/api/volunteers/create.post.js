@@ -11,10 +11,9 @@ export default defineEventHandler ( async (event) => {
     } 
   }
   catch (err) {
-    } else {
       return {
         error: true,
         message: 'Something went wrong!'
       }
-    }
+  }
 })

@@ -1,6 +1,6 @@
 <template>
 
-    <div class="max-w-screen-xl 
+    <div class="wrapper max-w-screen-xl 
      px-5 mx-auto text-title">
 
       <h1 class="heading font-bold 
@@ -15,7 +15,7 @@
         </div>
 
        <div v-else
-        class="grid sm:grid-cols-2
+        class="wrapper grid sm:grid-cols-2
         lg:grid-cols-3 gap-6 lg:gap-8">
 
         <Campaign-Card 
@@ -35,6 +35,12 @@
 </template>
 
 <script setup>
+  import { useAnimate } from '~/composables/useAnimate'
+  const { slide } = useAnimate()
+
+  onMounted(() => {
+    slide('.wrapper')
+  })
   
   const page = useState('page', () => 1)
   const limit = ref(3)
@@ -43,6 +49,13 @@
    '/api/campaign',
     { query: { page, limit }}
   )
+
+  if(error.value) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: 'Please check your network connection!'
+    })
+  }
 
   const skip = ref(page.value * limit.value)
   watch(page , (newValue) => {

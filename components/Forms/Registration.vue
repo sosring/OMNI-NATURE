@@ -1,8 +1,8 @@
 <template>
 
-<form class="w-full sm:max-w-2xl
- mx-auto py-8 px-4 md:px-6
- font-montserrat text-title"
+<form class="wrapper w-full sm:max-w-2xl
+ mx-auto py-8 px-4 md:px-6 font-montserrat 
+ text-title"
  name="registration-form" 
  @submit.prevent="registerVolunteer">
 
@@ -153,6 +153,13 @@
 <script setup>
  import { Country, State, City }  from 'country-state-city';
  import { useVolunteerStore } from '~/stores/useVolunteer'
+ import { useAnimate } from '~/composables/useAnimate'
+
+ const { slide } = useAnimate()
+
+ onMounted(() => {
+   slide('.wrapper')
+ })
 
  const { addNewVolunteer } = useVolunteerStore()
 

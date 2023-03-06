@@ -3,8 +3,6 @@ import ApiFeature from '~/server/utils/ApiFeature'
 
 export default defineEventHandler (async (event) => {
   try {
-    console.log(event)
-
     const features = new ApiFeature(CampaignModel.find(), getQuery(event))
     features.pagination()
 

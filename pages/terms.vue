@@ -1,6 +1,6 @@
 <template>
 
- <div class="max-w-6xl mx-auto p-4">
+ <div class="wrapper max-w-6xl mx-auto p-4">
  <h2 class="page-title
   font-oswald">Terms and Conditions</h2>
 
@@ -127,6 +127,17 @@
  <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
  </div>
 </template>
+
+<script setup>
+ import { useAnimate } from '~/composables/useAnimate'
+
+ const { slide } = useAnimate()
+
+ onMounted(() => {
+   slide('.wrapper')
+ })
+  
+</script>
 
 <style scoped>
 

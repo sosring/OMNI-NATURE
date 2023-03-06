@@ -1,6 +1,6 @@
 <template>
   
- <div class="max-w-6xl mx-auto p-4">
+ <div class="wrapper max-w-6xl mx-auto p-4">
 
  <h2 class="page-title">PRIVACY POLICY</h2>
  <p>1. <b>Introduction</b></p>
@@ -139,6 +139,17 @@
   <p>If you have any questions about this Privacy Policy, please contact us by email: <b>omninaturecarefoundation @gmail.com</b>.</p>
  </div>
 </template>
+
+<script setup>
+ import { useAnimate } from '~/composables/useAnimate'
+
+ const { slide } = useAnimate()
+
+ onMounted(() => {
+   slide('.wrapper')
+ })
+  
+</script>
 
 <style scoped>
 

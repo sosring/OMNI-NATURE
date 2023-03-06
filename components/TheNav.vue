@@ -23,7 +23,7 @@
     </nuxt-link>
 
   <div class="flex flex-col items-end  
-  justify-center md:hidden gap-2">
+  justify-center lg:hidden gap-2">
 
     <button 
      type="button"
@@ -41,7 +41,7 @@
   </div>
 
   <div class="hidden
-   md:grid text-xl p-2">
+   lg:grid text-xl p-2">
 
     <div class="flex justify-end
       items-end gap-3 text-base">

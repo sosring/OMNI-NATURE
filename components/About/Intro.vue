@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-screen-xl 
+  <section class="wrapper max-w-screen-xl 
    m-auto px-4 md:px-12 xl:px-6">
 
       <article class="space-y-6 md:space-y-0 
@@ -68,6 +68,15 @@
    </h3>
   </section>
 </template>
+
+<script setup>
+  import { useAnimate } from '~/composables/useAnimate'
+  const { slide } = useAnimate()
+
+  onMounted(() => {
+    slide('.wrapper')
+  })
+</script>
 
 <style scoped>
 

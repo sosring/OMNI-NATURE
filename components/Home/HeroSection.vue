@@ -12,8 +12,8 @@
     <article class="max-w-screen-xl
      mx-auto relative flex py-10 px-4">
 
-     <div class="text-title z-10
-      fond-montserrat py-8 px-4
+     <div class="text-wrapper text-title 
+      z-10 fond-montserrat py-8 px-4
       lg:py-16 space-y-6 md:space-y-8">
 
       <h2 class="heading 
@@ -39,7 +39,8 @@
 
     <img class="absolute -right-4 
      sm:right-0 z-0 -bottom-4 sm:bottom-0
-     h-250 sm:h-350 lg:h-[550px] object-scale-down"
+     h-250 sm:h-350 md:h-450 lg:h-600 
+     object-scale-down"
      src="/images/holding-plant.png" 
      alt="holding a plant">
 
@@ -47,9 +48,20 @@
   </section>
 </template>
 
+<script setup>
+  import { useAnimate } from '~/composables/useAnimate'
+
+  const { slide } = useAnimate()
+
+  onMounted(() => {
+    slide('.text-wrapper')
+  })
+</script>
+
 <style scoped>
   .hero-section {
-    background: linear-gradient(293.21deg, rgba(183, 208, 227, .8) 40.98%, rgba(185, 199, 210, .4) 102.93%);
+    background: linear-gradient(293.21deg, rgba(183, 208, 227, .8)
+    40.98%, rgba(185, 199, 210, .4) 102.93%);
   }
 
   .heading {
