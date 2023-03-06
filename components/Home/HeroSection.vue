@@ -23,7 +23,7 @@
       </h2>
 
       <p class="tagline">
-       Join us in creating a world <br>
+       Let us unite in creating a world <br>
        that works for everyone.
       </p>
 
