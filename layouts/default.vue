@@ -11,7 +11,7 @@
     <button class="material-symbols-outlined 
      fixed right-8 bottom-20 bg-highlight
      z-20 text-primary p-2 rounded-full
-     shadow-lg"
+     shadow-lg scroll-btn"
      @click="scrollTop">
       arrow_upward
     </button>
@@ -28,8 +28,9 @@
 </template>
 
 <script setup>
-  const showSideNav = ref(false)
+  import gsap from 'gsap'
 
+  const showSideNav = ref(false)
   const toggleNav = () => {
     showSidebar.value = !showSideNav.value
   }
@@ -39,13 +40,27 @@
   }
 
   // Popup Logic
-
   const popup = ref(false)
-
   setTimeout(() => {
     popup.value = true
   }, 10000);
 
+  // ScrollToTop
+  onMounted(() => {
+    gsap.from( '.scroll-btn', {
+      scrollTrigger: {
+        trigger: '.scroll-btn',
+        start: "20px 80%",
+        end: "=+500",
+        scrub: true,
+        toggleAction: "restart pause resume none"
+      }, 
+      y: 20,
+      opacity: 0,
+      duration: .5,
+      ease: 'in'
+    })
+  })
 </script>
 
 <style scoped>
