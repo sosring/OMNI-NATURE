@@ -60,7 +60,7 @@
                class="orange-btn shadow-lg
                rounded-md text-sm sm:text-lg 
                py-3 sm:px-6"
-               @click="$router.push('/join')">
+               @click="joinAction">
                 Take Action Now
               </button>
               </div>
@@ -93,6 +93,11 @@
 
   function closeModal() {
     emits('update:show', false)
+  }
+
+  function joinAction() {
+    useRouter().push('/join')
+    closeModal()
   }
 
   const iconStatus = computed(() => {
