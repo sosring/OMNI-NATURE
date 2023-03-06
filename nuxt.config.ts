@@ -6,8 +6,14 @@ export default defineNuxtConfig({
        '@pinia/nuxt', 
        {autoImports: ['defineStore', 'acceptHMRUpdate']}
      ],
-     'nuxt-headlessui'
+     'nuxt-headlessui',
+     '@nuxtjs/robots'
   ],
+  robots: {
+    UserAgent: '*',
+    Disallow: '/api',
+    Allow: '/'
+  },
   googleAnalytics: {
     id: process.env.GA_MEASUREMENT_ID
   },
