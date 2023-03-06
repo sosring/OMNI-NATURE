@@ -24,8 +24,7 @@
           bg-gradient-to-br from-gray-100 
           to-gray-200 rounded-md overflow-hidden">
           <img class="absolute h-full 
-           w-full object-cover object-bottom 
-           cursor-pointer"
+           w-full object-cover object-bottom"
            :src="image"
            :alt="image">
          </div>

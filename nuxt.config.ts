@@ -40,12 +40,16 @@ export default defineNuxtConfig({
         { hid: 'copyright', name: 'copyright', content: 'OMNI CARE NATURE FOUNDATION' },
         { hid: 'robots', name: 'robots', content: 'index' },
         { hid: 'designer', name: 'designer', content: 'sosring' },
-        { name: "instagram:title", content: "OMNI NATURE CARE FOUNDATION" },
-        { name: "instagram:description", content: "The Omni Nature Care Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems. The foundation emphasizes the need to preserve natural resources while continuing to meet the demands of infrastructure development." },
-        { name: "instagram:image", content: "~/images/favicon.png" },
-        { name: "facebook:title", content: "OMNI NATURE CARE FOUNDATION" },
-        { name: "facebook:description", content: "The Omni Nature Care Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems. The foundation emphasizes the need to preserve natural resources while continuing to meet the demands of infrastructure development." },
-        { name: "facebook:image", content: "~/images/favicon.png" }
+
+        { name: "og:title", content: "OMNI NATURE CARE FOUNDATION" },
+        { name: "og:description", content: "The Omni Nature Care Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems. The foundation emphasizes the need to preserve natural resources while continuing to meet the demands of infrastructure development." },
+        { name: "og:image", content: "~/images/favicon.png" },
+        { name: "og:url", content: "https://onc-foundation.com" },
+
+        { name: "twitter:title", content: "OMNI NATURE CARE FOUNDATION" },
+        { name: "twitter:description", content: "The Omni Nature Care Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems. The foundation emphasizes the need to preserve natural resources while continuing to meet the demands of infrastructure development." },
+        { name: "twitter:url", content: "https://onc-foundation.com" },
+        { name: "twitter:card", content: "The Omni Nature Care Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems." }
       ]
     }
   },
