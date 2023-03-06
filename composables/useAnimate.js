@@ -13,7 +13,7 @@ export const useAnimate = (() => {
         }, 
         y: 20,
         opacity: 0,
-        duration: .6,
+        duration: .8,
         ease: 'in'
       })
   }

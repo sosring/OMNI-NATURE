@@ -1,7 +1,7 @@
 <template>
 
-  <section class="max-w-screen-xl mx-auto
-   py-8 sm:py-12 space-y-6 px-4">
+  <section class="max-w-screen-xl 
+   mx-auto py-8 sm:py-12 space-y-6 px-4">
 
    <button class="orange-btn
     py-2 px-4 sm:text-lg"
@@ -9,7 +9,7 @@
       Back
    </button>
 
-    <article class="text-center">
+    <article class="wrapper text-center">
 
         <h3 class="my-4 md:my-8"
          v-html="gallery.title">
@@ -52,6 +52,13 @@
       statusMessage: `A ${id} gallery does not exist!`
     })
   }
+
+  import { useAnimate } from '~/composables/useAnimate'
+  const { slide } = useAnimate()
+
+  onMounted(() => {
+    slide('.wrapper')
+  })
 
 /*
   const showCarousel = ref(false)

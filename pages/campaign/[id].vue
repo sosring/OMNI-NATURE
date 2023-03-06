@@ -9,9 +9,9 @@
       Back
    </button>
 
-    <article class="space-y-6 md:space-y-0 
-      md:flex md:gap-6 lg:items-center 
-      lg:gap-12">
+    <article class="wrapper space-y-6 
+     md:space-y-0 md:flex md:gap-6 
+     lg:items-center lg:gap-12">
 
        <div class="md:w-5/12 lg:w-6/12">
         <img class="rounded-md object-cover"
@@ -44,6 +44,13 @@
       statusMessage: 'This Campaign does not exist!'
     })
   }
+
+  import { useAnimate } from '~/composables/useAnimate'
+  const { slide } = useAnimate()
+
+  onMounted(() => {
+    slide('.wrapper')
+  })
 </script>
 
 <style scoped>
