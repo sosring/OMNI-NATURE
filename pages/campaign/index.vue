@@ -45,7 +45,7 @@
   const page = useState('page', () => 1)
   const limit = ref(3)
 
-  const { data: campaigns, pending, error, refesh } = await useFetch(
+  const { data: campaigns, pending, error } = await useFetch(
    '/api/campaign',
     { query: { page, limit }}
   )

@@ -144,8 +144,8 @@
     { label: 'Campaign', path: '/campaign' },
     { label: 'Gallery', path: '/gallery' },
     { label: 'Contact', path: '/contact' },
-    { label: 'Donate', path: '/donate' },
-    { label: 'Join us', path: '/join' },
+    //{ label: 'Donate', path: '/donate' },
+    { label: 'Join us', path: '/join' }
   ] 
 
   const legals = [

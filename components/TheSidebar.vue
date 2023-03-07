@@ -58,8 +58,8 @@
     { icon: 'compost', label: 'Campign', path: '/campaign' },
     { icon: 'gallery_thumbnail', label: 'Gallery', path: '/gallery' },
     { icon: 'call', label: 'Contact us', path: '/contact' },
-    { icon: 'join', label: 'Join us', path: '/join' },
-    { icon: 'currency_rupee', label: 'Donate', path: '/donate' },
+    { icon: 'join', label: 'Join us', path: '/join' }
+    //{ icon: 'currency_rupee', label: 'Donate', path: '/donate' },
   ]
 
   const props = defineProps({

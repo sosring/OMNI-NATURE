@@ -14,6 +14,10 @@
 </template>
 
 <script setup>
+  definePageMeta({
+    middleware: () => false 
+  })
+
   useHead({
     title: 'OMNI NATURE CARE FOUNDATION | DONATE'
   })

@@ -53,12 +53,14 @@
         JOIN US
       </button>
 
+      <!--
       <button 
        type="button"
        class="orange-btn"
        @click="$router.push({ path: '/donate' })">
         DONATE
       </button>
+      -->
     </div>
 
     <ul class="flex gap-4 items-end">
