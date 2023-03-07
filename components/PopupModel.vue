@@ -34,7 +34,7 @@
              <button 
               @click="closeModal"
               class="material-symbols-outlined
-              absolute right-4 top-4/5">
+              absolute right-4 top-4/5 ">
                close 
              </button>
 
