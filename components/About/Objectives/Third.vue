@@ -3,8 +3,9 @@
   <article class="space-y-6 md:space-y-0 
      md:flex md:gap-6 lg:items-center lg:gap-12">
 
-     <div class="md:w-5/12 lg:w-6/12">
-      <img class="rounded-md object-cover"
+     <div class="relative md:w-5/12 lg:w-6/12">
+      <img class="absolute h-full
+       w-full rounded-md object-cover"
        src="/images/waste-management-technology.jpeg" 
        alt="wate management technology" loading="lazy">
       </div>

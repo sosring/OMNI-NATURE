@@ -21,8 +21,9 @@
         </p>
       </div>
 
-     <div class="md:w-5/12 lg:w-6/12">
-      <img class="rounded-md object-cover"
+     <div class="relative md:w-5/12 lg:w-6/12">
+      <img class="absolute h-full
+       w-full rounded-md object-cover"
        src="/images/net-zero.jpg" 
        alt="carbon credit illustration">
       </div>
