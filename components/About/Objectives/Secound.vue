@@ -19,7 +19,7 @@
         </div>
 
      <div class="md:w-5/12 lg:w-6/12">
-      <img class="rounded-md object-cover"
+      <img class="w-full rounded-md object-cover"
        src="/images/rain-water-harvesting.jpg" 
        alt="rain water harvesting">
       </div>

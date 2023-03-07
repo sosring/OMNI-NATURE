@@ -4,7 +4,7 @@
      md:flex md:gap-6 lg:items-center lg:gap-12">
 
      <div class="md:w-5/12 lg:w-6/12">
-      <img class="rounded-md object-cover"
+      <img class="w-full rounded-md object-cover"
        src="/images/waste-management-technology.jpeg" 
        alt="wate management technology">
       </div>
