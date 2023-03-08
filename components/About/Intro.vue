@@ -85,7 +85,7 @@
   }
 
   .quote {
-    font-size: clamp(1.3rem, 2.5vw, 3.2rem)
+    font-size: clamp(1.3rem, 3.5vw, 3.2rem)
   }
 
   .para {

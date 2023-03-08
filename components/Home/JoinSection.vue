@@ -9,7 +9,7 @@
 
      <div class="text-title z-10
       fond-montserrat py-8 px-4
-      lg:py-16">
+      py-16">
 
       <h3 class="heading sm:w-3/4
        font-bold mb-12 md:mb-20">
