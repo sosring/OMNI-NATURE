@@ -13,7 +13,7 @@ const donerSchema = new Schema({
     type: String,
     lowercase: true,
     required: [true, 'Please provide your email'],
-    validate: [Validator.isEmail, 'Please provide a valid email!']
+    validate: [validator.isEmail, 'Please provide a valid email!']
   },
   number: {
     type: Number,

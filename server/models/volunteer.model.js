@@ -11,7 +11,7 @@ const volunteerSchema = new Schema({
   email: {
     type: String,
     required: [true, 'Please provide your email'],
-    validate: [Validator.isEmail, 'Please provide a valid email!'],
+    validate: [validator.isEmail, 'Please provide a valid email!'],
     lowercase: true,
     unique: true
   },
