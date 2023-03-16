@@ -13,7 +13,7 @@
      mx-auto relative flex py-10 px-4">
 
      <div class="text-wrapper text-title 
-      z-10 fond-montserrat py-8 px-4
+      z-10 fond-montserrat py-8 
       lg:py-16 space-y-6 md:space-y-8">
 
       <h2 class="heading 
