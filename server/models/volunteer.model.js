@@ -1,4 +1,5 @@
 import { Schema, model } from 'mongoose'  
+import validator from 'validator'
 import slugify from 'slugify'
 
 const volunteerSchema = new Schema({
