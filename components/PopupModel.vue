@@ -27,7 +27,7 @@
             leave-to="opacity-0 scale-95">
 
             <DialogPanel class="model w-full max-w-md md:max-w-xl
-             lg:h-auto transform overflow-hidden rounded-2xl 
+             lg:h-auto transform overflow-hidden rounded-2xl bg-primary 
              text-left align-middle shadow-xl transition-all text-gray-100
              font-bold font-montserrat py-6 px-4 md:p-8 relative">
 
