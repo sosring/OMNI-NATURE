@@ -131,7 +131,7 @@
       <a class="mt-8 text-orange-500
         hover:text-orange-400 font-bold"
         :href="useDetails.dev" target="blank">
-        Scratchlab
+         Nascire venture
       </a>
     </span>
   </div>
