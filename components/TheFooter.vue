@@ -127,7 +127,7 @@
 
     <span class="text-xs text-gray-700">
       Made with 
-      <i class="fa fa-heart text-red-500"></i> in
+      <i class="fa fa-heart text-red-500"></i> by
       <a class="mt-8 text-orange-500
         hover:text-orange-400 font-bold"
         :href="useDetails.dev" target="blank">
