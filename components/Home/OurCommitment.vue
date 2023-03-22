@@ -44,6 +44,13 @@
 
   import "swiper/css/pagination"
   import 'swiper/css';
+
+    const cards = [
+    { name: 'Sustainable tech promotion', img: "sustainable-tech" },
+    { name: 'Green energy empowerment and guidance', img: 'green-empowerment' },
+    { name: 'Educate youth on sustainability', img: 'educate-youth' },
+    { name: 'Environmental protection through efficiency', img: 'environmental-protection' }
+  ]
 </script>
 
 <style scoped>
