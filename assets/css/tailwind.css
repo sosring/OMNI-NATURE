@@ -36,6 +36,11 @@
     @apply btn bg-secoundary
   }
 
+  .scroll-to-top {
+    @apply fixed right-8 bottom-20 bg-highlight z-20 
+    text-primary p-2 rounded-full shadow-lg 
+  }
+
   .footer-items {
     @apply font-montserrat font-bold 
     text-title text-lg underline decoration-4 

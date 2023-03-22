@@ -38,7 +38,7 @@
      </div>
 
     <img class="absolute -right-4 
-     sm:right-0 z-0 -bottom-4 sm:bottom-0
+     sm:right-0 z-0 -bottom-4 sm:bottom-0 
      h-250 sm:h-350 md:h-450 object-scale-down"
      src="/images/holding-plant.png" 
      alt="holding a plant">
