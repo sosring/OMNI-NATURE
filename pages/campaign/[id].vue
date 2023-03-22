@@ -1,6 +1,6 @@
 <template>
 
-  <section class="max-w-screen-xl mx-auto
+  <section class="container mx-auto
    py-8 sm:py-12 space-y-6 px-4">
 
    <button class="orange-btn
@@ -55,11 +55,11 @@
 
 <style scoped>
   .heading {
-    font-size: clamp(1.3rem, 2.5vw, 1.7rem)
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem)
   }
 
   .para {
-    font-size: clamp(.8rem, 2.5vw, 1.1rem);
+    font-size: clamp(.8rem, 2.5vw, 1rem);
   }
 
   h3 {

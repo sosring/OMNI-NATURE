@@ -6,15 +6,15 @@
     <img src="/images/solar-panels.jpg" 
      alt="solar-panels"
      class="mix-blend-soft-light blur-sm 
-     opacity-40 absolute h-full w-full
+     opacity-40 absolute inset-0
      object-cover object-top">
 
-    <article class="max-w-screen-xl
+    <article class="container
      mx-auto relative flex py-10 px-4">
 
      <div class="text-wrapper text-title 
-      z-10 fond-montserrat py-8 
-      lg:py-16 space-y-6 md:space-y-8">
+      z-10 fond-montserrat py-10
+      space-y-6 md:space-y-8">
 
       <h2 class="heading 
        text-cyan-900 font-bold">
@@ -39,8 +39,7 @@
 
     <img class="absolute -right-4 
      sm:right-0 z-0 -bottom-4 sm:bottom-0
-     h-250 sm:h-350 md:h-450 lg:h-600 
-     object-scale-down"
+     h-250 sm:h-350 md:h-450 object-scale-down"
      src="/images/holding-plant.png" 
      alt="holding a plant">
 

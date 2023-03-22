@@ -11,7 +11,7 @@
 
       <div class="md:w-7/12 lg:w-8/12">
 
-        <h3 class="mt-8">
+        <h3 class="mt-8 heading">
           1. PROMOTE SOLAR ENERGY TECHNOLOGIES <br> (URBAN & RURAL)
         </h3>
         <p class="mt-6">
@@ -103,15 +103,15 @@
 <style scoped>
 
   .heading {
-    font-size: clamp(1.1rem, 5vw, 2.1rem)
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem)
   }
 
   .sub-heading {
-    font-size: clamp(1.3rem, 2.5vw, 1.7rem)
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
   }
 
   .para {
-    font-size: clamp(.8rem, 2.5vw, 1.1rem);
+    font-size: clamp(.8rem, 2.5vw, 1rem);
   }
 
   h3 {

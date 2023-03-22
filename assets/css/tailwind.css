@@ -38,9 +38,8 @@
 
   .footer-items {
     @apply font-montserrat font-bold 
-    text-title text-xl md:text-2xl
-    underline decoration-4 decoration-secoundary
-    underline-offset-4
+    text-title text-lg underline decoration-4 
+    decoration-secoundary underline-offset-4
   }
 
   .footer-links {
@@ -76,17 +75,9 @@
     word-break: break-word; 
    }
 
-   *::-webkit-scrollbar {
-    display: none
-   }
-
-   .material-symbols-outlined {
-    font-size: 2rem !important;
-   }
-
-   .fas ,
+   .material-symbols-outlined,
    .fab {
-    font-size: 2rem !important;
+    font-size: 1.7rem !important;
    }
 
   input::-webkit-outer-spin-button,
@@ -101,9 +92,9 @@
   }
 
   
-@media (-wbkit-device-pixel-ratio: 1.5) {
-  :root {
-    zoom: .9;
+@media (-webkit-device-pixel-ratio: 1.5) {
+  html {
+    font-size: 14px
   }
 }
 }

@@ -3,11 +3,9 @@
   <section class="relative
    grid items-center">
 
-    <article class="text-wrapper
-     max-w-screen-xl mx-auto 
-     h-full text-title py-8 
-     px-4 sm:py-16 md:py-24 z-10 
-     space-y-6 md:space-y-8">
+    <article class="text-wrapper container 
+     mx-auto h-full text-title py-8 px-4 
+     sm:py-16 md:py-24 z-10 space-y-6 md:space-y-8">
 
     <h3 class="heading font-montserrat 
      font-bold">
@@ -36,7 +34,7 @@
    </article>
 
    <img class="z-0 absolute top-0 -right-0
-    hidden lg:block h-250 sm:h-450"
+    hidden lg:block h-250 sm:h-350"
     src="/images/four-pillars.png"
     alt="four pillars of Sustainability">
 

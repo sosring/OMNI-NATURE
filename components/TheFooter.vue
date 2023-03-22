@@ -2,10 +2,10 @@
   
 <footer class="bg-footer">
 
-  <div class="max-w-screen-xl mx-auto
+  <div class="container mx-auto
     px-4 py-8 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 
-     xl:gap-20 xl:grid-cols-3">
+     lg:gap-10 lg:grid-cols-3">
 
      <div>
       <nuxt-link to="/"
@@ -39,8 +39,8 @@
       </div>
 
       <div class="grid grid-cols-2 gap-8 
-       lg:col-span-2 xl:grid-cols-4
-       xl:pt-24">
+       lg:col-span-2 lg:grid-cols-4
+       lg:pt-24">
         <div>
           <p class="footer-items">
             Navigation
@@ -124,10 +124,16 @@
     <p class="mt-8 text-xs text-title">
       © 2022 OMNI NATURE CARE FOUNDATION 
     </p>
-    <a class="mt-8 text-xs text-title"
-      :href="useDetails.dev" target="blank">
-        WEBSITE DEVELOPER | DESIGNER
-    </a>
+
+    <span class="text-xs text-gray-700">
+      Made with 
+      <i class="fa fa-heart text-red-500"></i> in 
+      <a class="mt-8 text-orange-500
+        hover:text-orange-400 font-bold"
+        :href="useDetails.dev" target="blank">
+        Scratchlab
+      </a>
+    </span>
   </div>
  </footer>
 

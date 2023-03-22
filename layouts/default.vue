@@ -1,6 +1,5 @@
 <template>
-  <div class="h-screen 
-   w-screen scroll-smooth">
+  <div class="h-screen">
 
     <TheNav 
     v-model:showSideNav="showSideNav"/>
@@ -43,7 +42,7 @@
   const popup = ref(false)
   setTimeout(() => {
     popup.value = true
-  }, 30000);
+  }, 1000);
 
   // ScrollToTop
   onMounted(() => {

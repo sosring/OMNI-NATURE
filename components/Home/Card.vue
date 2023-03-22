@@ -1,7 +1,7 @@
 <template>
   <div class="rounded-md bg-primary
     overflow-hidden shadow-gray-300
-    shadow h-[90%]">
+    shadow h-4/5">
     <img class="h-4/5 w-full object-cover"
      :src="`/images/${card.img}.jpg`" 
      :alt="card.img">
