@@ -2,7 +2,8 @@
 
   <article class="rounded-xl shadow-md 
    bg-gradient-to-r from-indigo-50 
-   to-blue-50 overflow-hidden">
+   to-blue-50 overflow-hidden
+   h-300 sm:h-350">
 
      <div class="h-36 lg:h-48 relative 
       bg-gradient-to-br from-slate-100 
