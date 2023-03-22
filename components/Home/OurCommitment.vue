@@ -88,7 +88,7 @@
   }
 
   .swiper {
-    height: 250px;
+    height: 200px;
     width: min(1140px, 100%);
     padding: 1rem;
     position: relative;
@@ -117,7 +117,7 @@
 
   @media (min-width: 540px) {
     .swiper {
-      height: 350px;
+      height: 300px;
     }
   }
 
