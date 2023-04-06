@@ -10,7 +10,7 @@
       </div>
 
       <div class="md:w-7/12 lg:w-8/12">
-        <h3 class="mt-8">
+        <h3 class="mt-8 heading">
           3. TECHNOLOGIES TO RECYCLE OF WASTE GENERATED AND USE IN AN EFFECTIVE MANNER TYPES OF HOUSEHOLD WASTE Organic Waste
         </h3>
 
@@ -80,26 +80,24 @@
 </script>
 
 <style scoped>
-
   .heading {
-    font-size: clamp(1.3rem, 2.5vw, 1.5rem)
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem)
   }
 
   .sub-heading {
-    font-size: clamp(.9rem, 5vw, 1.2rem);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
   }
 
   .para {
-    font-size: clamp(.8rem, 2.5vw, 1.1rem);
+    font-size: clamp(.8rem, 2.5vw, 1rem);
   }
 
   h3 {
-    @apply heading font-montserrat 
+    @apply sub-heading font-montserrat 
     text-title font-medium
   }
 
   p {
-    @apply para font-raleway 
-    text-gray-600
+    @apply para font-raleway text-gray-600
   }
 </style>

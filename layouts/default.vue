@@ -1,6 +1,5 @@
 <template>
-  <div class="h-screen 
-   w-screen scroll-smooth">
+  <div class="h-screen">
 
     <TheNav 
     v-model:showSideNav="showSideNav"/>
@@ -8,11 +7,9 @@
     <TheSidebar 
     v-model:showSideNav="showSideNav"/>
 
-    <button class="material-symbols-outlined 
-     fixed right-8 bottom-20 bg-highlight
-     z-20 text-primary p-2 rounded-full
-     shadow-lg scroll-btn"
-     @click="scrollTop">
+    <button class="scroll-to-top
+     material-symbols-outlined"
+    @click="scrollTop">
       arrow_upward
     </button>
 
@@ -43,13 +40,13 @@
   const popup = ref(false)
   setTimeout(() => {
     popup.value = true
-  }, 10000);
+  }, 1000);
 
   // ScrollToTop
   onMounted(() => {
-    gsap.from( '.scroll-btn', {
+    gsap.from( '.scroll-to-top', {
       scrollTrigger: {
-        trigger: '.scroll-btn',
+        trigger: '.scroll-to-top',
         start: "20px 80%",
         end: "=+500",
         scrub: true,

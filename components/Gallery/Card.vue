@@ -14,7 +14,7 @@
      </div>
 
       <div class="py-2 px-4 flex justify-between">
-        <h1 class="text-sm lg:text-lg font-bold
+        <h1 class="text-sm lg:text-base font-bold
          font-montserrat text-title"
           v-html="title">
         </h1>

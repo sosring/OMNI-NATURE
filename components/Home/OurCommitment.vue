@@ -2,10 +2,8 @@
   
   <section class="relative">
 
-  <article class="diagonal
-   max-w-screen-xl mx-auto 
-   text-title py-8 px-4 
-   lg:py-16 z-10">
+  <article class="diagonal container 
+   mx-auto text-title py-8 px-4 z-10">
 
     <h3 class="heading font-montserrat 
      text-gray-50 z-10 font-bold mb-2 sm:mb-8">
@@ -47,12 +45,12 @@
   import "swiper/css/pagination"
   import 'swiper/css';
 
-  const cards = [
+    const cards = [
     { name: 'Sustainable tech promotion', img: "sustainable-tech" },
     { name: 'Green energy empowerment and guidance', img: 'green-empowerment' },
     { name: 'Educate youth on sustainability', img: 'educate-youth' },
     { name: 'Environmental protection through efficiency', img: 'environmental-protection' }
-  ] 
+  ]
 </script>
 
 <style scoped>
@@ -90,7 +88,7 @@
   }
 
   .swiper {
-    height: 250px;
+    height: 200px;
     width: min(1140px, 100%);
     padding: 1rem;
     position: relative;
@@ -119,7 +117,7 @@
 
   @media (min-width: 540px) {
     .swiper {
-      height: 350px;
+      height: 300px;
     }
   }
 

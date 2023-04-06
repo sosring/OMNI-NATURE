@@ -1,6 +1,6 @@
 <template>
 
-    <div class="wrapper max-w-screen-xl 
+    <div class="wrapper container 
      px-5 mx-auto text-title">
 
       <h1 class="heading font-bold 
@@ -45,7 +45,7 @@
   const page = useState('page', () => 1)
   const limit = ref(3)
 
-  const { data: campaigns, pending, error, refesh } = await useFetch(
+  const { data: campaigns, pending, error } = await useFetch(
    '/api/campaign',
     { query: { page, limit }}
   )
@@ -73,6 +73,6 @@
 
 <style scoped>
   .heading {
-    font-size: clamp(1.5rem, 5vw, 4rem)
+    font-size: clamp(1.5rem, 5vw, 3.5rem)
   }
 </style>

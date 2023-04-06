@@ -1,46 +1,49 @@
 import { Schema, model } from 'mongoose'  
+import validator from 'validator'
 import slugify from 'slugify'
 
 const donerSchema = new Schema({
   fullname: {
     type: String,
-    required: [true, 'A doner must have a name'],
+    required: [true, 'Please tell us your name!'],
     trim: true
   },
   slug: String,
   email: {
     type: String,
-    required: [true, 'A doner must have a email']
+    lowercase: true,
+    required: [true, 'Please provide your email'],
+    validate: [validator.isEmail, 'Please provide a valid email!']
   },
   number: {
     type: Number,
-    required: [true, 'A doner must have a phone number'],
+    required: [true, 'Please provide your number'],
     maxlength: [10, "A number must be 10 digit."]
   },
   address: {
     type: String,
-    required: [true, 'A doner must add their address']
+    required: [true, 'Please provide your number']
   },
   country: {
     type: String,
-    required: [true, 'A doner must add their country']
+    required: [true, 'Please provide your country']
   },
   state: {
     type: String,
-    required: [true, 'A doner must add their state']
+    required: [true, 'Please provide your state']
   },
   city: {
     type: String,
-    required: [true, 'A doner must add their city']
+    required: [true, 'Please provide your cty']
   },
   pincode: {
     type: Number,
-    required: [true, 'A Doner must add their pin code'],
+    required: [true, 'Please provide your pincode'],
     maxlength: [6, "A pin code must be 6 digits"]
   },
   message: {
     type: String,
-    required: [true, 'A Doner must leave a message'],
+    required: [true, 'Please leave a message'],
     trim: true
   },
   donated: {

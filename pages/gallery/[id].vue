@@ -1,7 +1,7 @@
 <template>
 
-  <section class="max-w-screen-xl 
-   mx-auto py-8 sm:py-12 space-y-6 px-4">
+  <section class="container mx-auto 
+   py-8 sm:py-12 space-y-6 px-4">
 
    <button class="orange-btn
     py-2 px-4 sm:text-lg"

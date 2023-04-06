@@ -1,7 +1,7 @@
 <template>
   <TransitionRoot appear :show="show" as="template">
     <Dialog as="div" @close="closeModal" 
-     class="relative z-10">
+     class="relative z-30">
       <TransitionChild
         as="template"
         enter="duration-300 ease-out"
@@ -27,14 +27,14 @@
             leave-to="opacity-0 scale-95">
 
             <DialogPanel class="model w-full max-w-md md:max-w-xl
-             lg:h-auto transform overflow-hidden rounded-2xl 
+             lg:h-auto transform overflow-hidden rounded-2xl bg-primary 
              text-left align-middle shadow-xl transition-all text-gray-100
              font-bold font-montserrat py-6 px-4 md:p-8 relative">
 
              <button 
               @click="closeModal"
               class="material-symbols-outlined
-              absolute right-4 top-4/5">
+              absolute right-4 top-4/5 ">
                close 
              </button>
 

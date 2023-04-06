@@ -9,6 +9,10 @@ export default defineNuxtConfig({
      'nuxt-headlessui',
      '@nuxtjs/robots'
   ],
+  server: {
+    host: '0.0.0.0',
+    port: 4000
+  },
   robots: {
     UserAgent: '*',
     Disallow: '/api',
@@ -26,7 +30,6 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en'
       },
-      pageTransition: { name: 'page', mode: 'out-in' },
       link: [
         { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css", integrity: "sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==", crossorigin: "anonymous", referrerpolicy: "no-referrer" },
         { rel: "icon", type: "image/x-icon", href: "/images/favicon.png" },

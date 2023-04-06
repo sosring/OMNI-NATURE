@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapper max-w-screen-xl 
+  <section class="wrapper container 
    m-auto px-4 md:px-12 xl:px-6">
 
       <article class="space-y-6 md:space-y-0 
@@ -49,7 +49,7 @@
       <a href="/OMNI.pdf" 
        download="OMNI" 
        class="blue-btn sm:py-3 
-       text-xs sm:text-base uppercase">
+       text-xs uppercase">
        download our pdf
       </a>
      </div>
@@ -81,15 +81,15 @@
 <style scoped>
 
   .heading {
-    font-size: clamp(1.1rem, 5vw, 2.1rem)
+    font-size: clamp(1.1rem, 5vw, 1.7rem)
   }
 
   .quote {
-    font-size: clamp(1.3rem, 3.5vw, 3.2rem)
+    font-size: clamp(1.3rem, 3.5vw, 2rem)
   }
 
   .para {
-    font-size: clamp(.8rem, 2.5vw, 1.1rem);
+    font-size: clamp(.8rem, 2.5vw, 1rem);
   }
 
   h2 {

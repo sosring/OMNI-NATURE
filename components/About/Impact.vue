@@ -1,6 +1,6 @@
 <template>
 
-  <section class="max-w-screen-xl mx-auto
+  <section class="container mx-auto
     m-auto px-4 md:px-12 xl:px-6">
     <article class="space-y-6 md:space-y-0 
      md:flex md:gap-6 lg:items-center lg:gap-12">
@@ -53,11 +53,11 @@
 <style scoped>
 
   .heading {
-    font-size: clamp(1.1rem, 5vw, 2.1rem)
+    font-size: clamp(1.1rem, 5vw, 1.7rem)
   }
 
   .para {
-    font-size: clamp(.8rem, 2.5vw, 1.1rem);
+    font-size: clamp(.8rem, 2.5vw, 1rem);
   }
 
   h3 {

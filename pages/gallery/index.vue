@@ -1,7 +1,7 @@
 
 <template>
 
-    <div class="wrapper max-w-screen-xl 
+    <div class="wrapper container 
      px-5 mx-auto text-title">
 
       <h1 class="heading font-bold 
@@ -63,6 +63,6 @@
 
 <style scoped>
   .heading {
-    font-size: clamp(1.5rem, 5vw, 4rem)
+    font-size: clamp(1.5rem, 5vw, 3.5rem)
   }
 </style>

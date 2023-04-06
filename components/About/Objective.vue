@@ -1,6 +1,6 @@
 <template>
 
-  <section class="max-w-screen-xl 
+  <section class="container
    m-auto p-4 md:p-12 xl:px-6
    space-y-4 sm:space-y-6">
 
@@ -20,7 +20,7 @@
 <style scoped>
 
   .heading {
-    font-size: clamp(1rem, 5vw, 2.1rem)
+    font-size: clamp(1rem, 5vw, 1.7rem)
   }
 
   h2 {

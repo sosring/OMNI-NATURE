@@ -1,31 +1,4 @@
 <template>
-    <article class="space-y-6 md:space-y-0 
-       md:flex md:gap-6 lg:items-center lg:gap-12">
-
-        <div class="md:w-7/12 lg:w-8/12">
-
-          <h3 class="mt-8">
-            2. RECYCLE AND TREATMENT OF USED WATER ALSO HARVEST THE RAIN WATER
-          </h3>
-          <p class="mt-6 sub-heading">
-            RECYCLE & TREATMENT OF WASTE WATER
-          </p>
-
-          <p class="mt-4">
-            Wastewater recycling enables more sustainable water usage and is an
-            important step in combating climate change. The reduction of water
-            wastage is particularly relevant to industrial manufacturers, who make up approximately 20% of global water consumption. Wastewater recycling systems make it possible for manufacturers to drastically reduce their water consumption, saving money and reducing the strain on local resources. Improved health and safety. Reduced water scarcity. Lower industrial costs. Meeting industry standards and regulations. Lowered strain on the environment.
-          </p>
-        </div>
-
-     <div class="md:w-5/12 lg:w-6/12">
-      <img class="w-full rounded-md object-cover"
-       src="/images/rain-water-harvesting.jpg" 
-       alt="rain water harvesting">
-      </div>
-
-      </article>
-
    <article class="space-y-6 md:space-y-0">
 
       <div class="md:w-7/12 lg:w-8/12">
@@ -102,21 +75,40 @@
 </script>
 
 <style scoped>
-
   .heading {
-    font-size: clamp(1.3rem, 2.5vw, 1.7rem)
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem)
   }
 
   .sub-heading {
-    font-size: clamp(.9rem, 5vw, 1.2rem)
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
   }
 
   .para {
-    font-size: clamp(.8rem, 2.5vw, 1.1rem);
+    font-size: clamp(.8rem, 2.5vw, 1rem);
   }
 
   h3 {
-    @apply heading font-montserrat 
+    @apply sub-heading font-montserrat 
+    text-title font-medium
+  }
+
+  p {
+    @apply para font-raleway text-gray-600
+  }
+  .heading {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem)
+  }
+
+  .sub-heading {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+
+  .para {
+    font-size: clamp(.8rem, 2.5vw, 1rem);
+  }
+
+  h3 {
+    @apply sub-heading font-montserrat 
     text-title font-medium
   }
 

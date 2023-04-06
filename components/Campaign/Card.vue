@@ -2,7 +2,8 @@
 
   <article class="rounded-xl shadow-md 
    bg-gradient-to-r from-indigo-50 
-   to-blue-50 overflow-hidden xl:h-400">
+   to-blue-50 overflow-hidden
+   h-300 sm:h-350">
 
      <div class="h-36 lg:h-48 relative 
       bg-gradient-to-br from-slate-100 
@@ -13,25 +14,24 @@
        :alt="campaign.thumbnail">
      </div>
 
-      <div class="p-6">
-        <h1 class="text-sm lg:text-base 
-         font-montserrat font-medium text-gray-600 mb-3"
-          v-html="campaign.title.slice(0,32) + '..'">
-        </h1>
+      <div class="p-4">
+        <h3 class="text-sm md:text-base 
+         font-montserrat font-medium text-gray-600 mb-2"
+          v-html="campaign.title.slice(0,30) + '..'">
+        </h3>
 
-        <p class="leading-relaxed mb-3 
-        text-xs lg:text-sm font-raleway
-        break-all"
+        <p class="leading-relaxed mb-2
+         text-xs font-raleway break-all"
           v-html="summary">
         </p>
+
         <div class="flex items-center flex-wrap ">
 
           <nuxt-link :to="`/campaign/${campaign._id}`"
-           class="blue-btn py-2 
-           rounded-lg text-white 
-           font-poppins font-medium" >
+           class="blue-btn text-xs rounded 
+           text-white font-poppins" >
             Learn more
-           </nuxt-link> 
+          </nuxt-link> 
          
         </div>
       </div>
