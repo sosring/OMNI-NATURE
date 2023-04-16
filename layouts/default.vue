@@ -40,7 +40,7 @@
   const popup = ref(false)
   setTimeout(() => {
     popup.value = true
-  }, 1000);
+  }, 5000);
 
   // ScrollToTop
   onMounted(() => {
