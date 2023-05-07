@@ -18,7 +18,7 @@
        <h1 class="hidden sm:block 
         sm:py-3 text-gray-700 text-xl 
         lg:text-2xl font-oswald">
-        OMNI NATURE CARE <br> FOUNDATION
+        OMNI NATURE <br> TECH FOUNDATION
        </h1>
     </nuxt-link>
 

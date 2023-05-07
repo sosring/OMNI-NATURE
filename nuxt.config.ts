@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'OMNI NATURE CARE FOUNDATION | NON PROFIT | GREEN INFRASTRUCTURE',
+      title: 'OMNI NATURE TECH FOUNDATION | NON PROFIT | GREEN INFRASTRUCTURE',
       htmlAttrs: {
         lang: 'en'
       },
@@ -38,21 +38,21 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8', },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'The Omni Nature Care Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems. The foundation emphasizes the need to preserve natural resources while continuing to meet the demands of infrastructure development.' },
-        { hid: 'keywords', name: 'keywords', content: 'OMNI NATURE CARE FOUNDATION, Environmental Protection, Carbon Emissions, Sustainable Technologies, Natural Resources, Carbon Footprints, Environmental Sustainability, Ecosystem, Climate Change, Green Infrastructure' },
+        { hid: 'description', name: 'description', content: 'The OMNI NATURE TECH Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems. The foundation emphasizes the need to preserve natural resources while continuing to meet the demands of infrastructure development.' },
+        { hid: 'keywords', name: 'keywords', content: 'OMNI NATURE TECH FOUNDATION, Environmental Protection, Carbon Emissions, Sustainable Technologies, Natural Resources, Carbon Footprints, Environmental Sustainability, Ecosystem, Climate Change, Green Infrastructure' },
         { hid: 'copyright', name: 'copyright', content: 'OMNI CARE NATURE FOUNDATION' },
         { hid: 'robots', name: 'robots', content: 'index' },
         { hid: 'designer', name: 'designer', content: 'sosring' },
 
-        { name: "og:title", content: "OMNI NATURE CARE FOUNDATION" },
-        { name: "og:description", content: "The Omni Nature Care Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems. The foundation emphasizes the need to preserve natural resources while continuing to meet the demands of infrastructure development." },
+        { name: "og:title", content: "OMNI NATURE TECH FOUNDATION" },
+        { name: "og:description", content: "The OMNI NATURE TECH Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems. The foundation emphasizes the need to preserve natural resources while continuing to meet the demands of infrastructure development." },
         { name: "og:image", content: "~/images/favicon.png" },
         { name: "og:url", content: "https://onc-foundation.com" },
 
-        { name: "twitter:title", content: "OMNI NATURE CARE FOUNDATION" },
-        { name: "twitter:description", content: "The Omni Nature Care Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems. The foundation emphasizes the need to preserve natural resources while continuing to meet the demands of infrastructure development." },
+        { name: "twitter:title", content: "OMNI NATURE TECH FOUNDATION" },
+        { name: "twitter:description", content: "The OMNI NATURE TECH Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems. The foundation emphasizes the need to preserve natural resources while continuing to meet the demands of infrastructure development." },
         { name: "twitter:url", content: "https://onc-foundation.com" },
-        { name: "twitter:card", content: "The Omni Nature Care Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems." }
+        { name: "twitter:card", content: "The OMNI NATURE TECH Foundation advocates for sustainable living through the use of green energy, recycling waste, and water treatment systems." }
       ]
     }
   },

@@ -9,12 +9,12 @@
 
     <h3 class="heading font-montserrat 
      font-bold">
-      OMNI NATURE <br>  CARE FOUNDATION
+      OMNI NATURE <br> TECH FOUNDATION
     </h3>
 
     <p class="tagline font-raleway 
       lg:w-4/5 leading-sung">
-      The Omni Nature Care Foundation advocates for 
+      The Omni Nature Tech Foundation advocates for 
       sustainable living through the use of green energy, 
       recycling waste, and water treatment systems. 
       The foundation emphasizes the need to preserve natural 

@@ -28,7 +28,7 @@
 
      <article class="my-6">
         <p>
-        OMNI NATURE CARE FOUNDATION focus on green infrastructure,
+        OMNI NATURE TECH FOUNDATION focus on green infrastructure,
         renewable energy , recycling of waste produced ,water treatment systems towards the society, related to sustainability. Sustainability is the ability to exist and develop without Depleting natural resources for the future.
         </p>
 

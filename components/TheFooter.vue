@@ -19,7 +19,7 @@
 
          <h3 class="py-3 text-title 
           text-xl sm:text-2xl font-oswald">
-          OMNI NATURE <br> CARE FOUNDATION
+          OMNI NATURE <br> TECH FOUNDATION
          </h3>
       </nuxt-link>
 
@@ -122,7 +122,7 @@
 
     </div>
     <p class="mt-8 text-xs text-title">
-      © 2022 OMNI NATURE CARE FOUNDATION 
+      © 2022 OMNI NATURE TECH FOUNDATION 
     </p>
 
     <span class="text-xs text-gray-700">
